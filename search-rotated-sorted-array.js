@@ -6,10 +6,19 @@ function searchByDivision(begin, end, target, nums) {
   if (nums[mid] === target) {
     return mid;
   }
-  if ((target < nums[begin] || (target >= nums[mid] && (nums[mid] > nums[begin] && nums[mid] < nums[end])))) {
-    return searchByDivision(mid + 1, end, target, nums);
+  if (nums[mid] >= nums[begin]) {
+    if (target >= nums[begin] && target < nums[mid])
+      // 执行二分查找
+      return searchByDivision(begin, mid - 1, target, nums);
+    else 
+      return searchByDivision(mid + 1, end, target, nums)
+  } else {
+    if (target > nums[mid] && target <= nums[end])
+      // 执行二分查找
+      return searchByDivision(mid + 1, end, target, nums);
+    else 
+      return searchByDivision(begin, mid - 1, target, nums)
   }
-  return searchByDivision(begin, mid - 1, target, nums);
 }
 /**
  * @param {number[]} nums
@@ -22,4 +31,4 @@ var search = function(nums, target) {
   return searchByDivision(0, nums.length - 1, target, nums);
 };
 
-console.log(search([1, 3], 2));
+console.log(search([4], 4));
