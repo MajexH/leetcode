@@ -1,3 +1,5 @@
+package RotatedList;
+
 public class ListNode {
 
     public int val;
@@ -7,7 +9,7 @@ public class ListNode {
 
     @Override
     public String toString() {
-        return "ListNode{" +
+        return "Solution.ListNode{" +
                 "val=" + val +
                 ", next=" + next +
                 '}';

@@ -1,7 +1,6 @@
-import java.util.HashMap;
-import java.util.Map;
+package RotatedList;
 
-public class RotatedList {
+public class Solution {
 
     public static int length(ListNode listNode) {
         int counter = 0;
