@@ -5,16 +5,18 @@
  * @param {Array} result
  */
 function perm(list, start, result) {
-  // TODO: stop
+  // stop
   if (start === list.length - 1) {
-    result.push(list)
+    let temp = JSON.parse(JSON.stringify(list));
+    result.push(temp)
     return
   }
-  for (let i = 0; i < list.length; i++) {
-    let temp = JSON.parse(JSON.stringify(list))
+  for (let i = start; i < list.length; i++) {
     // swap
     swap(list, start, i);
-    perm(temp, i + 1, result);
+    perm(list, start + 1, result);
+    // 交换回来
+    swap(list, start, i)
   }
 }
 
