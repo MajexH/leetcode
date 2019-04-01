@@ -19,4 +19,21 @@ var climbStairs = function(n) {
   return climb(0, n);
 };
 
-console.log(climbStairs(44))
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs1 = function(n) {
+  let dp_2 = 1, dp_1 = 2, dp;
+  if (n === 2) return dp_2;
+  else if (n === 1) return dp_1;
+  for (let i = 3; i <= n; i++) {
+    dp = dp_1 + dp_2;
+    dp_2 = dp_1;
+    dp_1 = dp;
+    
+  }
+  return dp;
+};
+
+console.log(climbStairs1(4))
