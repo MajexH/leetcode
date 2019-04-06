@@ -9,29 +9,21 @@ function TreeNode(val) {
  */
 var hasPathSum = function(root, sum) {
   // 采用DFS来做
-  let stack = [], pre = new TreeNode(0);
+  let stack = [];
   if (!root) return false;
-  // 用val去记住当前已经计算完的sum值
-  stack.push({
-    node: root,
-    val: root.val
-  });
+  stack.push(root);
   while (stack.length !== 0) {
-    let current = stack.pop(), item = current.node, val = current.val;
-    if (!item.left && !item.right && val === sum) {
+    let item = stack.pop();
+    if (!item.left && !item.right && item.val === sum) {
       return true
     }
     if (item.left) {
-      stack.push({
-        node: item.left,
-        val: val + item.left.val
-      })
+      item.left.val = item.val + item.left.val
+      stack.push(item.left)
     }
     if (item.right) {
-      stack.push({
-        node: item.right,
-        val: item.right.val + val
-      })
+      item.right.val = item.val + item.right.val
+      stack.push(item.right)
     }
   }
   return false;
