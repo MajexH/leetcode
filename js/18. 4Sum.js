@@ -30,7 +30,9 @@ function ksum(nums, k, target, start, result, temp) {
       else if (sum > target) j--;
       else {
         temp.push(nums[i], nums[j])
-        result.push(temp)
+        result.push(JSON.parse(JSON.stringify(temp)))
+        temp.pop()
+        temp.pop()
         // 跳过重复数字
         do {
           i++;
@@ -45,9 +47,9 @@ function ksum(nums, k, target, start, result, temp) {
   for (let i = start; i < nums.length - k + 1; i++) {
     if (i !== start && nums[i] === nums[i - 1]) continue;
     temp.push(nums[i])
-    ksum(nums, k - 1, target - nums[i], start + 1, result, JSON.parse(JSON.stringify(temp)))
+    ksum(nums, k - 1, target - nums[i], i + 1, result, JSON.parse(JSON.stringify(temp)))
     temp.pop()
   }
 }
 
-console.log(fourSum([1, 0, -1, 0, -2, 2], 0))
+console.log(fourSum([-3,-2,-1,0,0,1,2,3], 0))
