@@ -3,27 +3,19 @@
  * @return {string}
  */
 var removeOuterParentheses = function(S) {
-  let stack = [], result = '';
+  let result = '', level = 0;
   for (let item of S) {
     if (item !== ')') {
-      stack.push(item)
-      continue;
-    }
-    if (item === ')') {
-      let temp = '', stackItem
-      if (stack.length > 1) {
-        do {
-          stackItem = stack.pop();
-          temp += stackItem
-        } while (stack.length > 1 && stackItem !== '(') 
-        result += temp.split("").reverse().join("");
-        result += item;
-      } else {
-        stack.pop()
+      if (item === '(') {
+        level++;
       }
+      result += level > 1 ? item : ''
+    } else {
+      result += level === 1 ? '' : item
+      level--;
     }
   }
   return result
 };
 
-console.log(removeOuterParentheses("(()(()))"))
+console.log(removeOuterParentheses("()()"))
