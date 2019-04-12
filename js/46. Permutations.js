@@ -1,7 +1,7 @@
 /**
  * 
  * @param {Array} list 
- * @param {Number} start indicate the start position of the array 
+ * @param {number} start indicate the start position of the array 
  * @param {Array} result
  */
 function perm(list, start, result) {

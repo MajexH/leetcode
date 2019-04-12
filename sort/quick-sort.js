@@ -24,6 +24,7 @@ function partition(array, start, end) {
   let i = start, j = end + 1;
   while (true) {
     while (array[++i] < array[start])
+      // 防止越界
       if (i === end) break;
     while (array[--j] > array[start])
       if (j === start) break;
