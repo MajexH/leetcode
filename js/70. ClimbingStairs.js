@@ -31,7 +31,6 @@ var climbStairs1 = function(n) {
     dp = dp_1 + dp_2;
     dp_2 = dp_1;
     dp_1 = dp;
-    
   }
   return dp;
 };
