@@ -8,6 +8,7 @@ var uniquePathsWithObstacles = function(obstacleGrid) {
   for (let i = 0; i < m; i++) {
     array[i] = Array(n).fill(-1)
   }
+  array[0][0] = obstacleGrid[0][0] === 1 ? 0 : 1 
   recursion(m - 1, n - 1, array, obstacleGrid);
   return array[m - 1][n - 1]
 };
@@ -26,21 +27,16 @@ function recursion(m, n, memo, obstacleGrid) {
   if (memo[m][n] !== -1) {
     return memo[m][n]
   }
-  if (m === 0 && n === 0 && !obstacleGrid[m][n])
-    memo[m][n] = 1
-  else {
-    if (obstacleGrid[m][n]) {
-      memo[m][n] = 0
-    } else {
-      memo[m][n] = recursion(m - 1, n, memo, obstacleGrid) + recursion(m, n - 1, memo, obstacleGrid)
-    }
+  if (obstacleGrid[m][n]) {
+    // 只要经过这个有障碍的点 都不可能过去
+    memo[m][n] = 0
+  } else {
+    memo[m][n] = recursion(m - 1, n, memo, obstacleGrid) + recursion(m, n - 1, memo, obstacleGrid)
   }
   return memo[m][n]
 }
 
 let a = [
-  [0,0,0],
-  [0,1,0],
-  [0,0,0]
+  [1, 0, 0]
 ]
 console.log(uniquePathsWithObstacles(a))

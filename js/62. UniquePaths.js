@@ -8,6 +8,7 @@ var uniquePaths = function(m, n) {
   for (let i = 0; i < m; i++) {
     array[i] = Array(n).fill(-1);
   }
+  array[0][0] = 1
   recursion(m - 1, n - 1, array)
   return array[m - 1][n - 1]
 };
@@ -27,11 +28,7 @@ function recursion(m, n, memo) {
     return 0
   if (memo[m][n] !== - 1)
     return memo[m][n];
-  if (m === 0 && n === 0) {
-    memo[m][n] = 1
-  } else {
-    memo[m][n] = recursion(m - 1, n, memo) + recursion(m, n - 1, memo);
-  }
+  memo[m][n] = recursion(m - 1, n, memo) + recursion(m, n - 1, memo);
   return memo[m][n]
 }
 
