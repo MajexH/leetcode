@@ -11,10 +11,10 @@ var frequencySort = function(s) {
       map.set(item, 0)
     }
   }
-  for (let key of map.keys()) {
+  for (let [key, value] of map.entries()) {
     array.push({
       key,
-      val: map.get(key)
+      val: value
     })
   }
   array.sort((a, b) => { return b.val - a.val })
