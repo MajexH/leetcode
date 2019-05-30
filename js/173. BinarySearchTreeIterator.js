@@ -16,11 +16,6 @@ var BSTIterator = function(root) {
  * @return {number}
  */
 BSTIterator.prototype.next = function() {
-  // next之后要删除最小的节点
-  return this.deleteMin()
-};
-
-BSTIterator.prototype.deleteMin = function () {
   let res;
   function deleteMin(node) {
     if (!node.left) {
@@ -32,7 +27,7 @@ BSTIterator.prototype.deleteMin = function () {
   }
   this.node = deleteMin(this.node)
   return res
-}
+};
 
 /**
  * @return whether we have a next smallest number
