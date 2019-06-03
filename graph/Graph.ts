@@ -29,10 +29,21 @@ export class Graph {
    * @param pointX 
    * @param pointY 
    */
-  public addEdge(pointX: number, pointY: number) {
+  public addEdge(pointX: number, pointY: number): void {
+    // 需要判断当前的这个是不是已经存在边了 这两个节点
     // 因为是无向图 所以需要在两边都加上
-    this._array[pointX].next = new Node<number>(pointY)
-    this._array[pointY].next = new Node<number>(pointX)
+    let node = this.adjacent(pointX), nodeY = this.adjacent(pointY)
+    while (node.next) {
+      if (node.val && node.val === pointY) {
+        return
+      }
+      node = node.next
+    }
+    node.next = new Node<number>(pointY)
+    while (nodeY.next) {
+      nodeY = nodeY.next
+    }
+    nodeY.next = new Node<number>(pointX)
   }
 
   /**
