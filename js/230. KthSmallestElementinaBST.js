@@ -23,7 +23,6 @@ var kthSmallest = function(root, k) {
   }
 };
 
-
 /**
  * 获取node下所有节点的个数
  * @param {TreeNode} node 
