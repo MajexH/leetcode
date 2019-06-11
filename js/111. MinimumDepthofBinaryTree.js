@@ -7,7 +7,7 @@ function TreeNode(val) {
  * @param {TreeNode} root
  * @return {number}
  */
-var minDepth = function(root) {
+var minDepth1 = function(root) {
   let queue = [];
   let min = 0;
   if (root === null) return min;
@@ -33,6 +33,24 @@ var minDepth = function(root) {
   }
   return min;
 };
+
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var minDepth = function(root) {
+  return recursion(root)
+};
+
+function recursion(root) {
+  if (!root) return 0
+  let left = recursion(root.left), right = recursion(root.right)
+  if (left === 0)
+    return right + 1
+  if (right === 0)
+    return left + 1
+  return Math.min(left, right) + 1
+}
 
 let treeNode = new TreeNode(3)
 treeNode.right = new TreeNode(9)
