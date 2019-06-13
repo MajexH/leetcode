@@ -1,9 +1,7 @@
-
 function TreeNode(val) {
   this.val = val;
   this.left = this.right = null;
 }
-
 /**
  * @param {TreeNode} root
  * @return {number[]}
@@ -18,29 +16,27 @@ var postorderTraversal = function(root) {
     }
     if (stack.length !== 0) {
       root = stack.pop()
-      if (!root.flag) {
+      if (root.flag) {
+        // 说明是第二次弹出
+        res.push(root.val)
+        root = null
+      } else {
+        // 说明是第一次弹出
         root.flag = true
         stack.push(root)
-        // 如果该节点是第一次访问 也就是还不可以出栈 则访问其右子树
         root = root.right
-      } else {
-        res.push(root.val)
-        // 后序遍历 因为现在已经是第二次访问过了 所以他的左右子树都已经访问完了 所以需要把这个置位null
-        root = null
       }
     }
   }
-  return res;
+  return res
 };
 
 let root = new TreeNode(1)
-root.left = new TreeNode(2)
-root.right = new TreeNode(3)
-root.left.left = new TreeNode(4)
-root.left.right = new TreeNode(5)
-root.right.left = new TreeNode(6)
-root.right.right = new TreeNode(7)
+root.left = new TreeNode(3)
+root.right = new TreeNode(2)
+// root.left.left = new TreeNode(4)
+// root.left.right = new TreeNode(5)
+// root.right.left = new TreeNode(6)
+// root.right.right = new TreeNode(7)
 
 console.log(postorderTraversal(root))
-
-

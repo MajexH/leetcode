@@ -26,23 +26,18 @@ var reverseKGroup = function(head, k) {
   }
   if (temp.length < k) {
     temp = temp.reverse()
-    for (let i = temp.length - 1; i >= 0; i--) {
-      b.next = temp[i]
-      b = b.next
-    }
-  } else {
-    for (let i = temp.length - 1; i >= 0; i--) {
-      b.next = temp[i]
-      b = b.next
-    }
+  } 
+  for (let i = temp.length - 1; i >= 0; i--) {
+    b.next = temp[i]
+    b = b.next
   }
   return a.next
 };
 
 let node = new ListNode(1)
 node.next = new ListNode(2)
-// node.next.next = new ListNode(3)
-// node.next.next.next = new ListNode(4)
-// node.next.next.next.next = new ListNode(5)
+node.next.next = new ListNode(3)
+node.next.next.next = new ListNode(4)
+node.next.next.next.next = new ListNode(5)
 
 console.log(reverseKGroup(node, 2))
