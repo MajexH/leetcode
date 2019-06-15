@@ -6,6 +6,7 @@ function Node(val,left,right,next) {
 };
 
 /**
+ * 跟116一模一样·····
  * @param {Node} root
  * @return {Node}
  */
