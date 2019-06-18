@@ -24,6 +24,7 @@ var partition = function(s) {
 function recursion(s, start, temp, res) {
   if (start === s.length) {
     res.push(JSON.parse(JSON.stringify(temp)))
+    return
   }
   for (let i = start; i < s.length; i++) {
     let str = s.substring(start, i + 1);
