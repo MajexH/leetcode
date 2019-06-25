@@ -53,7 +53,7 @@ var canCompleteCircuit = function(gas, cost) {
     // 说明在i这个点 这个地方是负累加 即从最开始的start开始到i 这个地方是没办法回去的 所以从i+1开始遍历
     // 但是从 start - （i - 1）这个区间上 是正累加的 而如果从 i + 1这个后面也是正累加 意味着 从 i+1 - start 这个位置都是正累加 所有可以过去
     if (curGas < 0) {
-      curStation = i + 1
+      curStation = (i + 1) % gas.length
       curGas = 0
     }
   }
