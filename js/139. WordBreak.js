@@ -3,7 +3,7 @@
  * @param {string[]} wordDict
  * @return {boolean}
  */
-var wordBreak = function(s, wordDict) {
+var wordBreak1 = function(s, wordDict) {
   return recursion(s, 0, wordDict, new Map())
 };
 
@@ -33,5 +33,28 @@ function recursion(str, start, wordDict, memo) {
   memo.set(start, flag)
   return flag
 }
+
+/**
+ * dp[i]代表的是0-i的字符串是可以被在dict里面找到的
+ * @param {string} s
+ * @param {string[]} wordDict
+ * @return {boolean}
+ */
+var wordBreak = function(s, wordDict) {
+  let dp = Array(s.length + 1).fill(false)
+  // 空字符串肯定是能找到的
+  dp[0] = true
+  for (let i = 1; i <= s.length; i++) {
+    for (let j = 0; j < i; j++) {
+      let temp = s.substring(j, i)
+      // 表示 0-j j-i都是可以在dict里面找到的 所以dp[i]是true
+      if (wordDict.includes(temp, 0) && dp[j]) {
+        dp[i] = true
+      }
+    }
+  }
+  return dp[s.length]
+};
+
 
 console.log(wordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", ["a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"]))
