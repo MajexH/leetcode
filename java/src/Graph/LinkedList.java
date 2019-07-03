@@ -1,6 +1,9 @@
 package Graph;
 
-public class LinkedList<T extends Comparable<T>> {
+import java.util.Iterator;
+
+
+public class LinkedList<T extends Comparable<T>> implements Iterator<LinkedList<T>> {
 
     private T val;
     private LinkedList<T> next;
@@ -26,6 +29,16 @@ public class LinkedList<T extends Comparable<T>> {
 
     public void setNext(LinkedList<T> next) {
         this.next = next;
+    }
+
+    @Override
+    public boolean hasNext() {
+        return this.next == null;
+    }
+
+    @Override
+    public LinkedList<T> next() {
+        return this.getNext();
     }
 
     @Override
