@@ -60,12 +60,11 @@ function find(word, board, i, j, memo, index) {
 }
 
 
-let board = [
-  ["C","A","A"],
-  ["A","A","A"],
-  ["B","C","D"]
-]
+let board = [["A","B","C","E"],
+             ["S","F","E","S"],
+             ["A","D","E","E"]]
 
-let word = 'AAB'
+
+let word = "ABCESEEEFS"
 
 console.log(exist(board, word))
