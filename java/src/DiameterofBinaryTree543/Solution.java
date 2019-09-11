@@ -1,7 +1,5 @@
 package DiameterofBinaryTree543;
 
-import com.sun.source.tree.Tree;
-
 public class Solution {
 
     public static class TreeNode {
