@@ -17,16 +17,22 @@ public class Solution {
         for (int[] temp : prerequisites) {
             map.get(temp[1]).add(temp[0]);
         }
+        // 用来记录当前节点是否已经访问过 因为比如说 0-1 有边
+        // 那么如果1有环 那么从0开始 到1之后 也能走到这个闭环
+        // 所以不用再次访问
+        boolean[] total = new boolean[numCourses];
         // DFS 寻找有向环
         for (int i = 0; i < numCourses; i++) {
-            if (recursion(new boolean[numCourses], map, i)) return false;
+            if (recursion(new boolean[numCourses], map, i, total)) return false;
         }
         return true;
     }
 
-    public boolean recursion(boolean[] visited, List<List<Integer>> map, int start) {
+    public boolean recursion(boolean[] visited, List<List<Integer>> map, int start, boolean[] total) {
+        if (total[start]) return false;
         // 拿到邻接点
         List<Integer> list = map.get(start);
+        total[start] = true;
         visited[start] = true;
         for (int j : list) {
             // 说明是第二次访问 存在闭环
@@ -35,7 +41,7 @@ public class Solution {
             }
             else {
                 // 第一次访问 递归
-                if (recursion(visited, map, j)) return true;
+                if (recursion(visited, map, j, total)) return true;
             }
         }
         visited[start] = false;
