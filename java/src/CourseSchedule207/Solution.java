@@ -20,6 +20,7 @@ public class Solution {
         // 用来记录当前节点是否已经访问过 因为比如说 0-1 有边
         // 那么如果1有环 那么从0开始 到1之后 也能走到这个闭环
         // 所以不用再次访问
+        // 如果走到1 已经访问过没有闭环 那么 从0到1再到接下来的位置 也是没有闭环的
         boolean[] total = new boolean[numCourses];
         // DFS 寻找有向环
         for (int i = 0; i < numCourses; i++) {
