@@ -11,56 +11,67 @@ function TreeNode(val) {
 
 // @lc code=start
 // 保存一个数的前一个数 first second分别表示两个乱序的节点
-let pre = null, first = null, second = null
 /**
- * 因为二叉查找树 所以其 中序遍历 一定是一个有序的递增数组
- * 而如果交换任意两个数的顺序 一定会倒置有两个地方的顺序是乱序的
- * 因此 只需要找到两个乱序的地方 然后交换即可
- * 也就是说 当前如果 前一个数 大于 后一个数 则一定是乱序的
- * 也就只需要找到这两个数的地方 然后进行交换即可
+ * 因为递归不是一个o(1)空间的算法 因此采用morris travel
+ * morris travel的思想就是在每个叶子节点的最右 将其指向下一个节点
+ * 因此 采用morris travel的方式 可以在满足条件的情况下采用o(1)的空间
+ * 复杂度去遍历节点
+ * 因此 这样也可以找到两个逆序节点 最后再交换 即可
  * @param {TreeNode} root
  * @return {void} Do not return anything, modify root in-place instead.
  */
 var recoverTree = function(root) {
-  pre = null
-  first = null
-  second - null
-  recursion(root)
-  let temp = first.val
-  first.val = second.val
-  second.val = temp
-};
-
-/**
- * 
- * @param {TreeNode} node 
- */
-function recursion(node) {
-  if (!node) return
-  // 遍历左子树
-  recursion(node.left)
-  // 中间的部分判断是否是逆序的 然后分别记录两个逆序节点
-
-  // 这个地方主要是在最左子树的时候 会出现
-  if (!pre) pre = node
-  else {
-    // 如果存在逆序
-    if (pre.val > node.val) {
-      if (!first) first = pre
-      second = node
+  // morris遍历的思想是将叶子节点的右子树 指向下一个访问的节点
+  let p = root, temp, first, second, pre
+  while (p) {
+    // 说明到了最左边的叶子节点
+    if (!p.left) {
+      // 逆序
+      if (pre && pre.val > p.val) {
+        if (!first) first = pre
+        second = p
+      }
+      pre = p
+      // 这个时候 这个叶子节点的右端 要么已经连上之后的节点
+      // 要么继续去遍历当前节点的右子树
+      p = p.right
+    } else {
+      // 这个时候 左子树还没遍历完
+      temp = p.left
+      // 如果这时候temp.right已经链接了p 其实表明它已经是一个最右端的节点
+      while (temp.right && temp.right !== p)
+        temp = temp.right
+      if (!temp.right) {
+        // 第一次访问需要讲这个节点连接到p上
+        temp.right = p
+        // 继续遍历
+        p = p.left
+      } else {
+        // 逆序
+        if (pre && pre.val > p.val) {
+          if (!first) first = pre
+          second = p
+        }
+        pre = p
+        // 第二次访问 说明之前的左子树已经遍历完毕
+        // 遍历右子树
+        p = p.right
+        temp.right = null
+      }
     }
-    // 在下一个地方的时候 需要更新pre
-    pre = node
   }
-  // 遍历右子树
-  recursion(node.right)
-}
+  let temp1 = first.val
+  first.val = second.val
+  second.val = temp1
+};
 
 // @lc code=end
 
-let node = new TreeNode(3)
-node.left = new TreeNode(1)
-node.right = new TreeNode(4)
-node.right.left = new TreeNode(2)
+let node = new TreeNode(2)
+node.left = new TreeNode(3)
+node.right = new TreeNode(1)
+// node.right.left = new TreeNode(2)
+
 recoverTree(node)
+
 console.log(node)
