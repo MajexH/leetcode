@@ -37,7 +37,39 @@ function binarySearch(array, target) {
   return -1
 }
 
+/**
+ * 书上的示例代码
+ * 主要的思想是从整个矩阵的右上角出发
+ * 如果当前的右上角的数大于target
+ * 则说明则说明不可能在这一列 但是可能在左边
+ * 如果有商家的数 小于target
+ * 则说明不可能在这一行 因为是从右上角往下缩的缩小范围
+ * @param {Array[]} matrix 
+ */
+function searchNumberInMatrixSample(matrix, target) {
+  let rows = matrix.length - 1, cols = matrix[0].length - 1
+  let curRow = 0, curCol = cols
+
+  while (curRow <= rows && curCol >= 0) {
+    if (matrix[curRow][curCol] === target) {
+      console.log(curRow, curCol)
+      return true
+    } else if (matrix[curRow][curCol] < target) {
+      ++curRow
+    } else {
+      --curCol
+    }
+  }
+}
+
 console.log(searchNumberInMatrix(
+  [[1,2,8,9],
+   [2,4,9,12],
+   [4,7,10,13],
+   [6,8,11,15]], 7)
+)
+
+console.log(searchNumberInMatrixSample(
   [[1,2,8,9],
    [2,4,9,12],
    [4,7,10,13],
