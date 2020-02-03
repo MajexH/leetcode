@@ -1,8 +1,5 @@
-function TreeNode(data) {
-  this.data = data
-  this.left = null
-  this.right = null
-}
+const { TreeNode } = require('./tree.js');
+
 /**
  * 
  * @param {Array} pre 前序遍历数组 
@@ -20,8 +17,8 @@ function rebuildTree(pre, inOrder) {
 function recursion(pre, inOrder) {
   if (pre.length === 0 || inOrder.length === 0) return null
   let root = new TreeNode()
-  root.data = pre.shift()
-  let index = inOrder.findIndex((val) => val === root.data)
+  root.val = pre.shift()
+  let index = inOrder.findIndex((val) => val === root.val)
   root.left = recursion(pre.slice(0, index), inOrder.slice(0, index))
   root.right = recursion(pre.slice(index), inOrder.slice(index + 1))
   return root
