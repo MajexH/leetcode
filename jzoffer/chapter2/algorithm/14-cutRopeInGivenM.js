@@ -18,7 +18,7 @@ function recursion(n, m, start, index, memo) {
     return n - start
   }
   // 越界
-  if (start >= n) return Number.MIN_SAFE_INTEGER
+  if (start >= n) return 1
   if (memo[start] !== -1) return memo[start]
   let res = Number.MIN_SAFE_INTEGER
   for (let i = start + 1; i <= n; i++) {
