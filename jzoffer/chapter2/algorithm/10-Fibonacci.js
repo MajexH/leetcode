@@ -18,9 +18,9 @@ function fRecurisonWithMemo(n, memo) {
   }
 }
 
-let n = 40, memo = Array(n + 1).fill(-1);
+let n = 100, memo = Array(n + 1).fill(-1);
 memo[0] = 0; memo[1] = 1;
-console.log(fRecurison(n))
+// console.log(fRecurison(n))
 console.log(fRecurisonWithMemo(n, memo))
 console.log(fWithoutRecursion(n))
 
