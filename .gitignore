@@ -4,3 +4,4 @@
 /java/java.iml
 /graph/*.js
 /typescript/*.js
+.DS_Store
