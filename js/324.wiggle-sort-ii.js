@@ -35,7 +35,6 @@ var wiggleSort = function(nums) {
       even -= 2
     }
   }
-  console.log(temp)
   while (odd < nums.length) {
     temp[odd] = nums[mid]
     odd += 2
