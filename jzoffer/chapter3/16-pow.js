@@ -20,11 +20,11 @@ function power(base, exponent) {
   if (n === 0) return 1
   if (n === 1) return base
 
-  let res = power(base, exponent >> 2)
+  let res = power(base, exponent >> 1)
 
   res *= res
   // 奇数
-  if (res % 2 === 1)
+  if (exponent % 2 === 1)
     res *= base
   return res
 }
