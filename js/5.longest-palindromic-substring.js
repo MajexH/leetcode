@@ -18,7 +18,7 @@ var longestPalindrome = function(s) {
   for (let i = 0; i <= s.length; i++)
     memo[i] = Array(s.length + 1)
   for (let len = 1; len <= s.length; len++) {
-    for (let start= 0; start < s.length; start++) {
+    for (let start = 0; start < s.length; start++) {
       let end = start + len - 1
       if (end >= s.length) break
       // 为什么有len === 1 和 len === 2
