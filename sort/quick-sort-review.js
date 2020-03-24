@@ -24,7 +24,7 @@ function quickSort(array, start, end) {
 function partition(array, start, end) {
   // 选第一个数作为奇数
   let base = array[start], i = start, j = end + 1
-  while (true) {
+  while (i < j) {
     // 从左找到第一个大于base的数儿
     while (array[++i] < base) if (i === end) break
     // 从右找到第一个小于base的数儿
