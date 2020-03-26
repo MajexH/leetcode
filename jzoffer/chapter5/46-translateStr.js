@@ -28,7 +28,7 @@ function translateStrWithOutRecursion(str) {
   for (let i = str.length - 2; i >= 0; i--) {
     // 因为 可以形成两位数 所以有两种情况
     for (let j = 1; j <= 2; j++) {
-      if (i + j <= str.length && validateNumber(str.substring(i, i + j))) {
+      if (i + j < str.length && validateNumber(str.substring(i, i + j))) {
         dp[i] += dp[i + j]
       }
     }
@@ -86,13 +86,14 @@ function recursionWithReturnAllRes(str, start, memo) {
   return temp
 }
 /**
- * 
+ * 06 这样的数字 是不被支持得
  * @param {String} str 
  */
 function validateNumber(str) {
+  if (str.length > 1 && str.charAt(0) === '0') return false;
   let temp = Number.parseInt(str)
   return temp >= 0 && temp <= 25
 }
 
-console.log(translateStrWithRecursion('122584532351234513452355231512345125123451345345'))
-console.log(translateStrWithOutRecursion('122584532351234513452355231512345125123451345345'))
+console.log(translateStrWithRecursion('12258453235123451'))
+console.log(translateStrWithOutRecursion('506'))
