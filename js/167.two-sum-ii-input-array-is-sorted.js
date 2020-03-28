@@ -3,14 +3,12 @@
  *
  * [167] Two Sum II - Input array is sorted
  */
-
-// @lc code=start
 /**
  * @param {number[]} numbers
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(numbers, target) {
+var twoSum1 = function(numbers, target) {
   for (let i = 0; i < numbers.length; i++) {
     let tempTarget = target - numbers[i]
     let start = i + 1, end = numbers.length - 1
@@ -24,6 +22,25 @@ var twoSum = function(numbers, target) {
       } else {
         return [i + 1, mid + 1]
       }
+    }
+  }
+  return []
+};
+// @lc code=start
+/**
+ * @param {number[]} numbers
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(numbers, target) {
+  let i = 0, j = numbers.length - 1
+  while (i <= j) {
+    if (numbers[i] + numbers[j] < target) {
+      i++
+    } else if (numbers[i] + numbers[j] > target) {
+      j--
+    } else {
+      return [i + 1, j + 1]
     }
   }
   return []

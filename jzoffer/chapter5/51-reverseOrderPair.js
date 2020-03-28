@@ -15,6 +15,11 @@ function getReverseOrderPair(array) {
 function mergeSort(array, start, end) {
   if (start >= end) return 0
   let mid = Math.floor((start + end) / 2)
+  // 为什么这里left right res 需要三部分加起来
+  // 因为left只统计了到 start -> mid 为止的逆序对 right 统计了mid -> end 的逆序对
+  // 即使现在 left right 已经在自己的内部有序了
+  // 但是 left 和 right 最后合并的 时候 仍然在两个部分 合并的时候存在 逆序对
+  // 所以需要把三部分加起来
   let left = mergeSort(array, start, mid)
   let right = mergeSort(array, mid + 1, end)
   let res = merge(array, start, mid, end)
