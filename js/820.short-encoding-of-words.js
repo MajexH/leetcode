@@ -46,6 +46,7 @@ var minimumLengthEncoding = function(words) {
   for (let key of map.keys()) {
     // 表示这是个叶子节点
     if (key.count === 0) {
+      // 长度是叶子节点的对应的word的长度+1
       res += words[map.get(key)].length + 1
     }
   }

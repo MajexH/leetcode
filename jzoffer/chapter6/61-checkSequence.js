@@ -10,7 +10,7 @@ function checkSequence(array) {
   let numberOfZero = 0
   // 统计其中的任意的数有多少 即0有多少个
   for (let i = 0; i < array.length && array[i] === 0; i++) {
-      numberOfZero++
+    numberOfZero++
   }
   // 非0开始的index
   let pre = numberOfZero

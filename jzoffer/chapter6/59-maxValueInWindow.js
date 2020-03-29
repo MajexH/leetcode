@@ -7,6 +7,7 @@ function findAllMaxValueInWindow(array, windowSize) {
   let res = [], dequeue = []
   // 初始化的 第一个窗口期的 最大值数组
   for (let i = 0; i < windowSize; i++) {
+    // 这个地方的时候 一定不可能存在超过 滑动窗口 的大小超过 k 的大小的问题
     while (dequeue.length !== 0 && array[i] >= array[dequeue[dequeue.length - 1]]) {
       dequeue.pop()
     }
@@ -20,6 +21,7 @@ function findAllMaxValueInWindow(array, windowSize) {
       dequeue.pop()
     }
     // 当前的最大值 超过了窗口范围
+    // 超过了之后 之前的 dequeue 中 第一个已经不可能再是最大值了
     if (dequeue.length !== 0 && dequeue[0] <= (i - windowSize)) {
       dequeue.shift()
     }
