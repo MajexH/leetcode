@@ -20,7 +20,7 @@ var wordBreak = function(s, wordDict) {
     for (let j = 0; j <= i; j++) {
       // 用j作为分隔点 如果 0 - j - 1 即 dp[j] 已经能够被找到
       // 那么只需要知道 j - i 能否在set中找到即可
-      if (set.has(s.substring(j, i)) && dp[j]) {
+      if (dp[j] && set.has(s.substring(j, i))) {
         dp[i] = true
       }
     }

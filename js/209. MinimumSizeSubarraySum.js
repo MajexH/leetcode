@@ -4,6 +4,7 @@
  * @return {number}
  */
 var minSubArrayLen1 = function(s, nums) {
+  // left 保存连续数组的起始位置
   let sum = 0, left = 0, length = Number.MAX_SAFE_INTEGER
   for (let i = 0; i < nums.length; i++) {
     sum += nums[i]

@@ -43,6 +43,8 @@ LRUCache.prototype.addFirst = function (node) {
 }
 
 LRUCache.prototype.removeLast = function () {
+  // 防止start节点被删除
+  if (this.end.pre === this.start) return
   return this.end.pre.remove()
 }
 
