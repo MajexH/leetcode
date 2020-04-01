@@ -3,8 +3,6 @@
  *
  * [215] Kth Largest Element in an Array
  */
-
-// @lc code=start
 /**
  * 用小顶堆来做
  * @param {number[]} nums
@@ -20,6 +18,45 @@ var findKthLargest = function(nums, k) {
   }
   return array.top()
 };
+// @lc code=start
+/**
+ * 用小顶堆来做
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var findKthLargest = function(nums, k) {
+  let start = 0, end = nums.length - 1
+  let index = partition(nums, start, end)
+  while (index !== k - 1) {
+    if (index > k - 1) {
+      end = index - 1
+    } else {
+      start = index + 1
+    }
+    index = partition(nums, start, end)
+  }
+  return nums[k - 1]
+};
+
+/**
+ * 
+ * @param {Number[]} nums 
+ * @param {Number} start 
+ * @param {Number} end 
+ */
+function partition(nums, start, end) {
+  let base = nums[start]
+  let i = start, j = end + 1
+  while (true) {
+    while (nums[++i] > base) if (i === end) break
+    while (nums[--j] < base) if (j === start) break
+    if (i >= j) break
+    _swap(nums, i, j)
+  }
+  _swap(nums, start, j)
+  return j
+}
 
 function _checkNone(val) {
   return val === null || val === undefined

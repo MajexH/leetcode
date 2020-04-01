@@ -3,8 +3,6 @@
  *
  * [221] Maximal Square
  */
-
-// @lc code=start
 /**
  * dp问题 dp[i][j]代表以[i][j]为右下角的正方形中最大的边长
  * 所以最后的结果是保存在dp[width][length]中
@@ -13,27 +11,57 @@
  * @param {character[][]} matrix
  * @return {number}
  */
-var maximalSquare = function(matrix) {
-  let height = matrix.length, width = height > 0 ? matrix[0].length : 0, max = 0
-  let dp = Array(width)
+var maximalSquare1 = function(matrix) {
+  let height = matrix.length,
+    width = height > 0 ? matrix[0].length : 0,
+    max = 0;
+  let dp = Array(width);
   // 初始化dp
   for (let i = 0; i < height; i++) {
-    dp[i] = Array(width).fill(0)
+    dp[i] = Array(width).fill(0);
   }
   for (let i = 0; i < height; i++) {
     for (let j = 0; j < width; j++) {
-      if (matrix[i][j] === '1') {
-        dp[i][j] = Math.min(
-          i - 1 < 0 ? 0 : dp[i - 1][j], 
-          j - 1 < 0 ? 0 : dp[i][j - 1], 
-          i - 1 < 0 || j - 1 < 0 ? 0 : dp[i - 1][j - 1]
-        ) + 1
-        max = Math.max(max, dp[i][j])
+      if (matrix[i][j] === "1") {
+        dp[i][j] =
+          Math.min(
+            i - 1 < 0 ? 0 : dp[i - 1][j],
+            j - 1 < 0 ? 0 : dp[i][j - 1],
+            i - 1 < 0 || j - 1 < 0 ? 0 : dp[i - 1][j - 1]
+          ) + 1;
+        max = Math.max(max, dp[i][j]);
       }
     }
   }
-  return max * max
+  return max * max;
+};
+// @lc code=start
+/**
+ * @param {character[][]} matrix
+ * @return {number}
+ */
+var maximalSquare = function(matrix) {
+  // dp[i][j] 表示 matrix[i][j] 为右下角的正方形边长
+  let dp = Array(matrix.length),
+    max = 0;
+  for (let i = 0; i < matrix.length; i++) {
+    dp[i] = Array(matrix[i].length).fill(0);
+  }
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (matrix[i][j] === '1') {
+        dp[i][j] =
+          Math.min(
+            i - 1 < 0 || j - 1 < 0 ? 0 : dp[i - 1][j - 1],
+            i - 1 < 0 ? 0 : dp[i - 1][j],
+            j - 1 < 0 ? 0 : dp[i][j - 1]
+          ) + 1;
+        max = Math.max(dp[i][j], max);
+      }
+    }
+  }
+  return max * max;
 };
 // @lc code=end
 
-console.log(maximalSquare([]))
+console.log(maximalSquare([]));

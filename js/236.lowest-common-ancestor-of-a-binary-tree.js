@@ -42,32 +42,27 @@ function recursion(root, p, q) {
  * @return {TreeNode}
  */
 var lowestCommonAncestor = function(root, p, q) {
-  let parents = new Map()
-  let stack = [root]
-  parents.set(root, null)
-  // 找到p q
-  while (!parents.has(p) || !parents.has(q)) {
+  let parent = new Map(), stack = [root]
+  parent.set(root, null)
+  while ((!parent.has(p) || !parent.has(q)) && stack.length > 0) {
     let top = stack.pop()
     if (top.left) {
-      parents.set(top.left, top)
+      parent.set(top.left, top)
       stack.push(top.left)
     }
     if (top.right) {
-      parents.set(top.right, top)
+      parent.set(top.right, top)
       stack.push(top.right)
     }
   }
-  // 构建p的祖先链
-  let ancestors = new Set()
+  let parentChain = new Set()
   while (p !== null) {
-    ancestors.add(p)
-    p = parents.get(p)
+    parentChain.add(p)
+    p = parent.get(p)
   }
-  // q在祖先链中第一个找到的祖先 就公共最小祖先
-  while (!ancestors.has(q)) {
-    q = parents.get(q)
+  while (!parentChain.has(q)) {
+    q = parent.get(q)
   }
-  return q 
+  return q
 };
 // @lc code=end
-
