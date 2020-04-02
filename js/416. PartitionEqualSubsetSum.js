@@ -18,8 +18,8 @@ var canPartition1 = function(nums) {
  */
 function recursion(target, nums, index) {
   if (target === 0) return true
-  if (nums[index] > target) return false
   if (index >= nums.length) return false
+  if (nums[index] > target) return false
   return recursion(target - nums[index], nums, index + 1) || recursion(target, nums, index + 1)
 }
 

@@ -26,13 +26,13 @@ function recursion(nums, target, memo) {
   memo.set(target, res)
   return res
 }
-// @lc code=start
+
 /**
  * @param {number[]} nums
  * @param {number} target
  * @return {number}
  */
-var combinationSum4 = function(nums, target) {
+var combinationSum42 = function(nums, target) {
   // dp[i] 表示 target 为时的 结果
   let dp = Array(target + 1).fill(0);
   // target 为0 的时候 选择0个
@@ -41,6 +41,25 @@ var combinationSum4 = function(nums, target) {
     for (let j = 0; j < nums.length; j++) {
       if (i - nums[j] >= 0)
         dp[i] += dp[i - nums[j]]
+    }
+  }
+  return dp[target]
+};
+
+// @lc code=start
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var combinationSum4 = function(nums, target) {
+  let dp = Array(target + 1).fill(0)
+  dp[0] = 1
+  for (let i = 1; i <= target; i++) {
+    for (let j = 0; j < nums.length; j++) {
+      if (i - nums[j] >= 0) {
+        dp[i] += dp[i - nums[j]]
+      }
     }
   }
   return dp[target]
