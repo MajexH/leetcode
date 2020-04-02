@@ -42,8 +42,6 @@ function recurison(s, t, sIndex, tIndex, memo) {
   memo[sIndex][tIndex] = recurison(s, t, sIndex, tIndex + 1, memo)
   return memo[sIndex][tIndex]
 }
-
-// @lc code=start
 /**
  * 估计只能采用动态规划来做了
  * 动态规划 爆堆了
@@ -51,7 +49,7 @@ function recurison(s, t, sIndex, tIndex, memo) {
  * @param {string} t
  * @return {boolean}
  */
-var isSubsequence = function(s, t) {
+var isSubsequence2 = function(s, t) {
   let dp = Array(s.length + 1)
   for (let i = 0; i <= s.length; i++) {
     // s串为空时 表示任何的串都可以匹配
@@ -69,7 +67,32 @@ var isSubsequence = function(s, t) {
   }
   return dp[s.length][t.length]
 };
+// @lc code=start
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+var isSubsequence = function(s, t) {
+  let dp = new Array(s.length + 1)
+  for (let i = 1; i <= s.length; i++) {
+    dp[i] = Array(t.length + 1).fill(false)
+  }
+  // 因为s串为空的时候 任何字符串都可以匹配
+  dp[0] = Array(t.length + 1).fill(true)
+  for (let i = 1; i <= s.length; i++) {
+    // 如果 t 串比 s 串长度短 一定不可能
+    for (let j = i; j <= t.length; j++) {
+      if (s.charAt(i - 1) === t.charAt(j - 1)) {
+        dp[i][j] = dp[i - 1][j - 1]
+      } else {
+        dp[i][j] = dp[i][j - 1]
+      }
+    }
+  }
+  return dp[s.length][t.length]
+};
 
 // @lc code=end
 
-console.log(isSubsequence1('axc', 'ahbgdc'))
+console.log(isSubsequence('b', 'c'))
