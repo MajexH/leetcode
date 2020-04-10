@@ -40,5 +40,30 @@ function zeroOneBag(values, weights, capacity) {
   return dp[capacity]
 }
 
+/**
+ * 这个是01背包 每个物品 可以拿一次
+ * @param {Number[]} values 
+ * @param {Number[]} weights 
+ * @param {Number} capacity 
+ */
+function zeroOneBagWithMNSpace(values, weights, capacity) {
+  // dp[i][j] 表示前i个装到容量为j的背包里面形成的最大值
+  let dp = Array(weights.length + 1)
+  for (let i = 0; i <= weights.length; i++) {
+    dp[i] = Array(capacity + 1).fill(0)
+  }
+  for (let i = 1; i <= weights.length; i++) {
+    // for (let j = capacity; j >= weights[i - 1]; j--) {
+    for (let j = 0; j <= capacity; j++) {
+      if (j >= weights[i - 1])
+        dp[i][j] = Math.max(dp[i - 1][j], dp[i - 1][j - weights[i - 1]] + values[i - 1])
+      else
+        dp[i][j] = dp[i - 1][j]
+    }
+  }
+  console.log(dp)
+  return dp[values.length][capacity]
+}
+console.log(zeroOneBagWithMNSpace([6,10,12],[1,2,3],5))
 console.log(zeroOneBag([6,10,12],[1,2,3],5))
 console.log(completeBag([6,10,12],[1,2,3],5))
