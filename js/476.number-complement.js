@@ -6,6 +6,7 @@
 
 // @lc code=start
 /**
+ * 这道题实际上问得是 找到2进制中 最左边的1 然后把这一位 和后面的 全部置反
  * @param {number} num
  * @return {number}
  */
