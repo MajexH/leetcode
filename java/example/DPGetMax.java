@@ -30,7 +30,6 @@ public class DPGetMax {
                 for (int k = 0; i + k < j; k++) {
                     dp[i][j] = Math.max(dp[i][j], Math.max(dp[i][i + k] + dp[i + k + 1][j], dp[i][i + k] * dp[i + k + 1][j]));
                 }
-
             }
         }
 

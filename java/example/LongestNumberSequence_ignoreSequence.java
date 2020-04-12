@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class LongestNumberSequence {
+public class LongestNumberSequence_ignoreSequence {
 
     // 给定一个数组 找到其最长的 等差数列 的长度 无所谓其数字的顺序
     public int longestNumberSequence(int n, int[] nums) {
@@ -26,6 +26,6 @@ public class LongestNumberSequence {
     }
 
     public static void main(String[] args) {
-        System.out.println(new LongestNumberSequence().longestNumberSequence(5, new int[]{1,3,5,7,8,10, 6}));
+        System.out.println(new LongestNumberSequence_ignoreSequence().longestNumberSequence(5, new int[]{1,3,5,7,8,10, 6}));
     }
 }
