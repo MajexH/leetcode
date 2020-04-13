@@ -23,4 +23,4 @@ function continuousPositiveNumberSequence(target) {
   return res
 }
 
-console.log(continuousPositiveNumberSequence(15))
+console.log(continuousPositiveNumberSequence(18))
