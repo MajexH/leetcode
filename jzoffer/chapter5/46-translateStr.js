@@ -96,4 +96,4 @@ function validateNumber(str) {
 }
 
 console.log(translateStrWithRecursion('12258453235123451'))
-console.log(translateStrWithOutRecursion('506'))
+console.log(translateStrWithOutRecursion('101'))
