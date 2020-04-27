@@ -50,7 +50,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Solution().canFinish(2, new int[][]{{1, 0}, {0 , 1}}));
+        System.out.println(new Solution().canFinish(3, new int[][]{ {0,1}, {0,2}, {1, 2} }));
     }
 
 }

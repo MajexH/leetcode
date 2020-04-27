@@ -7,7 +7,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.regex.Pattern;
 
-public class Test {
+public class TestConcurrent {
 
     public enum TestEnum {
         test() {

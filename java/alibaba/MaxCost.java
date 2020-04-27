@@ -14,7 +14,7 @@ public class MaxCost {
 
         @Override
         public String toString() {
-            return "Node{" +
+            return "UndirectedGraph.Base.Node{" +
                     "id=" + id +
                     ", pId=" + pId +
                     ", cost=" + cost +
