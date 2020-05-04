@@ -4,7 +4,7 @@ public class LongestValidParentheses_32 {
     public int longestValidParentheses(String s) {
         // stack 表示s里面的位置 不过保存的是当前 合理字符串 的开始位置（因为这样在碰到右括号的时候 可以直接拿到长度）
         LinkedList<Integer> stack = new LinkedList<>();
-        int maxLength = Integer.MIN_VALUE;
+        int maxLength = 0;
         stack.add(-1);
         for (int i = 0; i < s.length(); i++) {
             // 遇到左括号
