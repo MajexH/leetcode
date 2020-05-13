@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class NumberofMatchingSubsequences_792 {
 
-    // Node 表示的就是桶里面的元素
+    // UndirectedGraph.Base.Node 表示的就是桶里面的元素
     // 其中Node保存了 word 和当前的index
     public class Node {
         String word;

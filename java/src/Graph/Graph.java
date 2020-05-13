@@ -51,7 +51,7 @@ public class Graph<T extends Comparable<T>> {
 
     @Override
     public String toString() {
-        return "Graph{" +
+        return "PreVersion.Base.Graph{" +
                 "totalPoint=" + totalPoint +
                 ", array=" + array +
                 '}';
