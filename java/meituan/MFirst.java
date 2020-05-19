@@ -2,19 +2,6 @@ import java.util.*;
 
 public class MFirst {
 
-//    public static class Pair {
-//        public Integer i;
-//        public Integer max;
-//
-//        @Override
-//        public String toString() {
-//            return "Pair{" +
-//                    "i=" + i +
-//                    ", max=" + max +
-//                    '}';
-//        }
-//    }
-
     public static class Pair {
         public Integer index;
         public Integer credit;
@@ -32,21 +19,6 @@ public class MFirst {
 
         HashSet<Integer> res = new HashSet<>();
         int[][] credits = new int[n][m];
-//        Pair[] maxs = new Pair[m];
-//        for (int i = 0; i < n; i++) {
-//            for (int j = 0; j < m; j++) {
-//                credits[i][j] = scanner.nextInt();
-//                if (maxs[j] == null || maxs[j].max < credits[i][j]) {
-//                    Pair temp = new Pair();
-//                    temp.i = i;
-//                    temp.max = credits[i][j];
-//                    maxs[j] = temp;
-//                }
-//            }
-//        }
-//        for (Pair temp : maxs) {
-//            res.add(temp.i);
-//        }
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 credits[i][j] = scanner.nextInt();
