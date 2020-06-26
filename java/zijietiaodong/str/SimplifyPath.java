@@ -25,6 +25,6 @@ public class SimplifyPath {
     }
 
     public static void main(String[] args) {
-        System.out.println(new SimplifyPath().simplifyPath("/../"));
+        System.out.println(new SimplifyPathNew().simplifyPath("/../"));
     }
 }

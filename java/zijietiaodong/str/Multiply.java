@@ -36,6 +36,6 @@ public class Multiply {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Multiply().multiply("23", "4"));
+        System.out.println(new MultiplyNew().multiply("23", "4"));
     }
 }
