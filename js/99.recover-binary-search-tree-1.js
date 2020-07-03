@@ -25,7 +25,7 @@ let pre = null, first = null, second = null
 var recoverTree = function(root) {
   pre = null
   first = null
-  second - null
+  second = null
   recursion(root)
   let temp = first.val
   first.val = second.val
