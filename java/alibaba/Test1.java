@@ -16,11 +16,11 @@ public class Test1 {
             try {
                 lock.lock();
                 for (char i = 'a'; i <= 'z'; i++) {
-                    if (flag) {
+                    while (flag) {
                         firstRun.await();
                     }
                     flag = true;
-                    System.out.println(i);
+                    System.out.print(i);
                     secondRun.signalAll();
 
                 }
@@ -35,11 +35,11 @@ public class Test1 {
             try {
                 lock.lock();
                 for (int i = 1; i <= 26; i++) {
-                    if (!flag) {
+                    while (!flag) {
                         secondRun.await();
                     }
                     flag = false;
-                    System.out.println(i);
+                    System.out.print(i);
                     firstRun.signalAll();
                 }
             } catch (InterruptedException e) {
