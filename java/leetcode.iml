@@ -11,6 +11,14 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/meituan" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/zijietiaodong" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/beike" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/design-pattern" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/hx" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/jzoffer" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/leetcode-explore" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/zijie-new" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tencent-new" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tencent" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
