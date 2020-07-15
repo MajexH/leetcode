@@ -1,4 +1,4 @@
-package highFrequency;
+package highFrequency.classic;
 
 public class SellDock {
 
