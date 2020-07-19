@@ -1,4 +1,4 @@
-package highFrequency.list;
+package highFrequency.stackAndHeap;
 
 import java.util.Arrays;
 import java.util.Comparator;

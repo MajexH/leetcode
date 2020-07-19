@@ -3,12 +3,12 @@ package dataStructure;
 import java.util.Deque;
 import java.util.LinkedList;
 
-public class MinStack {
+public class MinStackNew {
 
     private LinkedList<Integer> stack1;
     private LinkedList<Integer> stack2;
     /** initialize your data structure here. */
-    public MinStack() {
+    public MinStackNew() {
         this.stack1 = new LinkedList<>();
         this.stack2 = new LinkedList<>();
     }
