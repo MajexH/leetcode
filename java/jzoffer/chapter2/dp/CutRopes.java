@@ -1,3 +1,5 @@
+package chapter2.dp;
+
 import java.util.Arrays;
 
 public class CutRopes {

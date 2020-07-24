@@ -6,7 +6,6 @@ public class Singleton {
         public Object param2;
     }
 
-    // 饿汉式单例模式
     // 懒汉式是在 <clinit> 的时候创建这个对象，然后访问这个类的时候
     // 直接返回这个对象即可
     public static class LazySingleton {
