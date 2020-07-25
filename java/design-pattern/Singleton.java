@@ -81,6 +81,19 @@ public class Singleton {
         }
     }
 
+
+    private enum EnumSingleton {
+        INSTANCE(new NeedSingletonClass());
+        private NeedSingletonClass singletonClass;
+
+        EnumSingleton(NeedSingletonClass singletonClass) {
+            this.singletonClass = singletonClass;
+        }
+
+        public static NeedSingletonClass getInstance() {
+            return INSTANCE.singletonClass;
+        }
+    }
     public static void main(String[] args) {
 //        System.out.println(StaticClassSingleton.getInstance());
         new Thread(() -> {
@@ -89,7 +102,7 @@ public class Singleton {
             } catch (InterruptedException interruptedException) {
                 interruptedException.printStackTrace();
             }
-            System.out.println(StaticClassSingleton.getInstance());
+            System.out.println(EnumSingleton.getInstance());
         }).start();
         new Thread(() -> {
             try {
@@ -97,7 +110,7 @@ public class Singleton {
             } catch (InterruptedException interruptedException) {
                 interruptedException.printStackTrace();
             }
-            System.out.println(StaticClassSingleton.getInstance());
+            System.out.println(EnumSingleton.getInstance());
         }).start();
     }
 }
