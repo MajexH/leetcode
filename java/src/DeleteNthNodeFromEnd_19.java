@@ -1,4 +1,4 @@
-public class DeleteNthNodeFromEnd {
+public class DeleteNthNodeFromEnd_19 {
 
     public class ListNode {
         int val;
