@@ -8,11 +8,11 @@ public class WordBreakII_140 {
     }
 
     // DFS function returns an array including all substrings derived from s.
-    List<String> DFS(String s, Set<String> wordDict, HashMap<String, LinkedList<String>>map) {
+    List<String> DFS(String s, Set<String> wordDict, HashMap<String, LinkedList<String>> map) {
         if (map.containsKey(s))
             return map.get(s);
 
-        LinkedList<String>res = new LinkedList<String>();
+        LinkedList<String> res = new LinkedList<>();
         if (s.length() == 0) {
             res.add("");
             return res;
@@ -57,29 +57,6 @@ public class WordBreakII_140 {
         memo.put(index, res);
         return res;
     }
-
-
-//    public List<String> wordBreak1(String s, List<String> wordDict) {
-//        HashSet<String> dict = new HashSet<>(wordDict);
-//        List<String> res = new ArrayList<>();
-//        recursion(dict, s, 0, res, new ArrayList<>());
-//        return res;
-//    }
-//
-//    public void recursion(HashSet<String> dict, String s, int index, List<String> res, ArrayList<String> temp) {
-//        if (index == s.length()) {
-//            res.add(String.join(" ", temp));
-//            return;
-//        }
-//        for (int i = index + 1; i <= s.length(); i++) {
-//            String tempStr = s.substring(index, i);
-//            if (dict.contains(tempStr)) {
-//                temp.add(tempStr);
-//                recursion(dict, s, i, res, temp);
-//                temp.remove(temp.size() - 1);
-//            }
-//        }
-//    }
 
     public static void main(String[] args) {
         String[] strsTemp = new String[]{"cats","dog","sand","and","cat"};
