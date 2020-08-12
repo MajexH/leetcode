@@ -5,12 +5,12 @@ import java.util.Set;
 
 public class PDDInterview2 {
 
-    public void recursion(Set<Integer> res, List<Integer> coins, List<Integer> temp, int index) {
-        if (temp.size() != 0) res.add(temp.stream().reduce(Integer::sum).get());
+    public void recursion(Set<Integer> res, List<Integer> coins, int index, int sum) {
+        if (sum != 0) res.add(sum);
         for (int i = index; i < coins.size(); i++) {
-            temp.add(coins.get(i));
-            recursion(res, coins, temp, i + 1);
-            temp.remove(temp.size() - 1);
+            sum += coins.get(i);
+            recursion(res, coins, i + 1, sum);
+            sum -= coins.get(i);
         }
     }
 
@@ -30,7 +30,7 @@ public class PDDInterview2 {
                 coinsWithCount.add(coins[i]);
             }
         }
-        recursion(res, coinsWithCount, new ArrayList<>(), 0);
+        recursion(res, coinsWithCount,0, 0);
         return new ArrayList<>(res);
     }
 
