@@ -6,6 +6,8 @@ import java.util.PriorityQueue;
 
 public class MeetingRoomII {
 
+    // 给定一组数 每个 interval 表示一个会议的开始时间和结束时间
+    // 问 最少需要占用多少个会议室
     public int minMeetingRooms(int[][] intervals) {
         Arrays.sort(intervals, Comparator.comparingInt(pre -> pre[0]));
         PriorityQueue<Integer> queue = new PriorityQueue<>();
