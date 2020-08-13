@@ -24,9 +24,10 @@ function recursion(root) {
   // 上一个root要和左子树的 最右子树 相连
   // 其实就是找到左子树的 最右子树 相连
   let cur = root.left
-  if (!cur) return
-  while (cur.right) {
-    cur = cur.right
+  if (cur) {
+    while (cur.right) {
+      cur = cur.right
+    }
   }
   // 与root相连 形成双向链接
   root.left = cur
