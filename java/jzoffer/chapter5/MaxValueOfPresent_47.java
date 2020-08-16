@@ -1,6 +1,6 @@
 package chapter5;
 
-public class MaxValueOfPresent {
+public class MaxValueOfPresent_47 {
 
     public int maxValue(int[][] grid) {
         int[][] dp = new int[grid.length][];
