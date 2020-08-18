@@ -9,7 +9,7 @@ public class SingleNumberII_56_1 {
         // 统计 nums 中每个 int 中每一位上的 1 的数量 然后 模 3 就可以得到这个单个数在每一位上的1的数量 这个数就出来了
         int[] res = new int[32];
         for (int num : nums) {
-            for (int i = 31, j = 1; i >= 0 && num > 0; i--) {
+            for (int i = 31, j = 1; i >= 0; i--) {
                 if ((num & j) != 0) {
                     res[i]++;
                     res[i] %= 3;

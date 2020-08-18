@@ -3,7 +3,7 @@
  * @param {*} n 
  */
 function nDicesSum(n) {
-  let res = recurison(n, 1), total = Math.pow(n, n)
+  let res = recurison(n, 1), total = Math.pow(6, n)
   for (let key of res.keys()) {
     res.set(key, res.get(key) / total)
   }
