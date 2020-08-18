@@ -4,6 +4,7 @@
  * @param {number} windowSize
  */
 function findAllMaxValueInWindow(array, windowSize) {
+  if (array.length == 0 || windowSize == 0) return []
   let res = [], dequeue = []
   // 初始化的 第一个窗口期的 最大值数组
   for (let i = 0; i < windowSize; i++) {
