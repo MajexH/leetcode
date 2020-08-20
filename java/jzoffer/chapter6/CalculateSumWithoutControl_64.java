@@ -1,6 +1,6 @@
 package chapter6;
 
-public class CalculateSumWithoutControl {
+public class CalculateSumWithoutControl_64 {
 
     public int sumNums(int n) {
         return recursion(n);
@@ -13,6 +13,6 @@ public class CalculateSumWithoutControl {
     }
 
     public static void main(String[] args) {
-        System.out.println(new CalculateSumWithoutControl().sumNums(3));
+        System.out.println(new CalculateSumWithoutControl_64().sumNums(3));
     }
 }
