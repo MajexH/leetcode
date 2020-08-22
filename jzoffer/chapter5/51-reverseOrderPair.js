@@ -42,14 +42,16 @@ function merge(array, start, mid, end) {
   while (i <= mid && j <= end) {
     if (array[i] <= array[j]) {
       temp.push(array[i++])
+      // 这个地方就是逆序对 相当于现在 array[j] 之前的 都比 i 小
+      // 因此都是 逆序的 因此 逆序数对的长度就是 j 之前的长度
+      res += j - mid - 1
     } else {
-    // 这个地方就是逆序对
-      res++
       temp.push(array[j++])
     }
   }
   while (i <= mid) {
     temp.push(array[i++])
+    res += j - mid - 1
   }
   while (j <= end) {
     temp.push(array[j++])
@@ -60,4 +62,4 @@ function merge(array, start, mid, end) {
   return res
 }
 
-console.log(getReverseOrderPair([1,2,4,5,3]))
+console.log(getReverseOrderPair([7,5,6,4]))
