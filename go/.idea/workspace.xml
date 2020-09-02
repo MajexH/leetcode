@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="980a2481-6a6d-4790-acc5-125626ac7685" name="Default Changelist" comment="add go tencent" />
+    <list default="true" id="8a392151-3769-43a9-9b87-364ffe18a2ac" name="Default Changelist" comment="add review go">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tencent/backtrack/subsets.go" beforeDir="false" afterPath="$PROJECT_DIR$/tencent/backtrack/subsets.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,19 +39,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1grXQQaYE8Sl1GJtmQWOjZfVq1L" />
+  <component name="ProjectId" id="1gozr5G5P3NGZFSwDCPIT8NLgPo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -58,56 +62,80 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
-  <component name="RunManager" selected="Go Build.go build generate_parenthesis.go">
-    <configuration name="go build generate_parenthesis.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\majexh\Documents\project\leetcode\go\src\main" />
+      <recent name="C:\Users\majexh\Documents\project\leetcode\go" />
+      <recent name="C:\Users\majexh\Documents\project\leetcode\go\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build longest_common_prefix.go">
+    <configuration name="go build FindMedianInSortedArray.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/tencent/backtrack/generate_parenthesis.go" />
+      <filePath value="$PROJECT_DIR$/tencent/array_and_str/FindMedianInSortedArray.go" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build kth_max_in_array.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build TwoSum.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/tencent/sort_and_search/kth_max_in_array.go" />
+      <filePath value="$PROJECT_DIR$/tencent/array_and_str/TwoSum.go" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build reverse_number.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build a.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/tencent/math_and_number/reverse_number.go" />
+      <filePath value="$PROJECT_DIR$/a.go" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build rotate_right.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build longest_common_prefix.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/tencent/list/rotate_right.go" />
+      <filePath value="$PROJECT_DIR$/tencent/array_and_str/longest_common_prefix.go" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build search_in_rotate_array.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build longest_palindrome.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/tencent/sort_and_search/search_in_rotate_array.go" />
+      <filePath value="$PROJECT_DIR$/tencent/array_and_str/longest_palindrome.go" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="go build test.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/test.go" />
+      <directory value="$PROJECT_DIR$" />
+      <option name="run" value="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.go build test.go" />
+      <item itemvalue="Go Build.go build a.go (1)" />
+      <item itemvalue="Go Build.go build TwoSum.go" />
+      <item itemvalue="Go Build.go build FindMedianInSortedArray.go" />
+      <item itemvalue="Go Build.go build longest_palindrome.go" />
+      <item itemvalue="Go Build.go build longest_common_prefix.go" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build generate_parenthesis.go" />
-        <item itemvalue="Go Build.go build kth_max_in_array.go" />
-        <item itemvalue="Go Build.go build search_in_rotate_array.go" />
-        <item itemvalue="Go Build.go build reverse_number.go" />
-        <item itemvalue="Go Build.go build rotate_right.go" />
+        <item itemvalue="Go Build.go build longest_common_prefix.go" />
+        <item itemvalue="Go Build.go build longest_palindrome.go" />
+        <item itemvalue="Go Build.go build FindMedianInSortedArray.go" />
+        <item itemvalue="Go Build.go build TwoSum.go" />
+        <item itemvalue="Go Build.go build a.go (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -128,104 +156,65 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add go tencent" />
-    <option name="LAST_COMMIT_MESSAGE" value="add go tencent" />
+    <MESSAGE value="add review go" />
+    <option name="LAST_COMMIT_MESSAGE" value="add review go" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598953179903">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="817" y="215" key="#GOPATH" timestamp="1598796616171">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1598953179903" />
-    <state width="1877" height="187" key="GridCell.Tab.0.bottom" timestamp="1598965018094">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="817" y="215" key="#GOPATH/0.0.2048.1112@0.0.2048.1112" timestamp="1598796616171" />
+    <state x="479" y="211" width="1089" height="860" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598796513147">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1877" height="187" key="GridCell.Tab.0.bottom/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1598965018094" />
-    <state width="1877" height="187" key="GridCell.Tab.0.center" timestamp="1598965018094">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="479" y="211" width="1089" height="860" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1598796513147" />
+    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1598796727833">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1877" height="187" key="GridCell.Tab.0.center/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1598965018094" />
-    <state width="1877" height="187" key="GridCell.Tab.0.left" timestamp="1598965018094">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1598796727833" />
+    <state width="2005" height="376" key="GridCell.Tab.0.bottom" timestamp="1598799439232">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1877" height="187" key="GridCell.Tab.0.left/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1598965018094" />
-    <state width="1877" height="187" key="GridCell.Tab.0.right" timestamp="1598965018094">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2005" height="376" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1598799439232" />
+    <state width="2005" height="376" key="GridCell.Tab.0.center" timestamp="1598799439232">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1877" height="187" key="GridCell.Tab.0.right/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1598965018094" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1598964918458">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2005" height="376" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1598799439232" />
+    <state width="2005" height="376" key="GridCell.Tab.0.left" timestamp="1598799439232">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1598964918458" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1598964918457">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2005" height="376" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1598799439232" />
+    <state width="2005" height="376" key="GridCell.Tab.0.right" timestamp="1598799439232">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1598964918457" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1598964918457">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2005" height="376" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1598799439232" />
+    <state width="2005" height="376" key="GridCell.Tab.1.bottom" timestamp="1598799439232">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1598964918457" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1598964918457">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2005" height="376" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1598799439232" />
+    <state width="2005" height="376" key="GridCell.Tab.1.center" timestamp="1598799439232">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1598964918457" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1598873710189">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2005" height="376" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1598799439232" />
+    <state width="2005" height="376" key="GridCell.Tab.1.left" timestamp="1598799439232">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1598873710189" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1598966895660">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2005" height="376" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1598799439232" />
+    <state width="2005" height="376" key="GridCell.Tab.1.right" timestamp="1598799439232">
+      <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1598966895660" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/tencent/array_and_str/three_sum.go</url>
-          <line>62</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/tencent/array_and_str/multiply_str.go</url>
-          <line>19</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/tencent/list/reverse_list.go</url>
-          <line>12</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/tencent/math_and_number/reverse_number.go</url>
-          <line>26</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/tencent/sort_and_search/search_in_rotate_array.go</url>
-          <line>18</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/tencent/sort_and_search/kth_max_in_array.go</url>
-          <line>43</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/tencent/sort_and_search/kth_max_in_array.go</url>
-          <line>24</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/tencent/sort_and_search/kth_max_in_array.go</url>
-          <line>10</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/tencent/backtrack/generate_parenthesis.go</url>
-          <line>19</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state width="2005" height="376" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1598799439232" />
+    <state x="526" y="201" key="SettingsEditor" timestamp="1598796731503">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="526" y="201" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1598796731503" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1598799427799">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1598799427799" />
+    <state x="829" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598971684847">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="829" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112@0.0.2048.1112" timestamp="1598971684847" />
   </component>
 </project>
