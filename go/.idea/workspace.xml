@@ -19,9 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a392151-3769-43a9-9b87-364ffe18a2ac" name="Default Changelist" comment="add review go">
+    <list default="true" id="8a392151-3769-43a9-9b87-364ffe18a2ac" name="Default Changelist" comment="add go tencent">
+      <change afterPath="$PROJECT_DIR$/tencent/backtrack/permutation.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tencent/dp/climb_stairs.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tencent/dp/max_profit.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tencent/dp/max_profitII.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tencent/dp/max_sub_array_sum.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tencent/dp/unique_paths.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tencent/backtrack/subsets.go" beforeDir="false" afterPath="$PROJECT_DIR$/tencent/backtrack/subsets.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +67,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -71,31 +76,7 @@
       <recent name="C:\Users\majexh\Documents\project\leetcode\go\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build longest_common_prefix.go">
-    <configuration name="go build FindMedianInSortedArray.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/tencent/array_and_str/FindMedianInSortedArray.go" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build TwoSum.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/tencent/array_and_str/TwoSum.go" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build a.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/a.go" />
-      <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Build.go build max_profitII.go">
     <configuration name="go build longest_common_prefix.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go" />
       <working_directory value="$PROJECT_DIR$" />
@@ -112,30 +93,44 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build test.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build max_profitII.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/test.go" />
+      <filePath value="$PROJECT_DIR$/tencent/dp/max_profitII.go" />
       <directory value="$PROJECT_DIR$" />
-      <option name="run" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build max_sub_array_sum.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/tencent/dp/max_sub_array_sum.go" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build permutation.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/tencent/backtrack/permutation.go" />
+      <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build test.go" />
-      <item itemvalue="Go Build.go build a.go (1)" />
-      <item itemvalue="Go Build.go build TwoSum.go" />
-      <item itemvalue="Go Build.go build FindMedianInSortedArray.go" />
-      <item itemvalue="Go Build.go build longest_palindrome.go" />
       <item itemvalue="Go Build.go build longest_common_prefix.go" />
+      <item itemvalue="Go Build.go build longest_palindrome.go" />
+      <item itemvalue="Go Build.go build permutation.go" />
+      <item itemvalue="Go Build.go build max_sub_array_sum.go" />
+      <item itemvalue="Go Build.go build max_profitII.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build max_profitII.go" />
+        <item itemvalue="Go Build.go build max_sub_array_sum.go" />
+        <item itemvalue="Go Build.go build permutation.go" />
         <item itemvalue="Go Build.go build longest_common_prefix.go" />
         <item itemvalue="Go Build.go build longest_palindrome.go" />
-        <item itemvalue="Go Build.go build FindMedianInSortedArray.go" />
-        <item itemvalue="Go Build.go build TwoSum.go" />
-        <item itemvalue="Go Build.go build a.go (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -172,41 +167,58 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1598796727833" />
-    <state width="2005" height="376" key="GridCell.Tab.0.bottom" timestamp="1598799439232">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1599052977799">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-387.1080.1880@0.0.1920.1040" timestamp="1599052977799" />
     <state width="2005" height="376" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1598799439232" />
-    <state width="2005" height="376" key="GridCell.Tab.0.center" timestamp="1598799439232">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1877" height="187" key="GridCell.Tab.0.bottom/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1599024384361" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1599052977799">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-387.1080.1880@0.0.1920.1040" timestamp="1599052977799" />
     <state width="2005" height="376" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1598799439232" />
-    <state width="2005" height="376" key="GridCell.Tab.0.left" timestamp="1598799439232">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1877" height="187" key="GridCell.Tab.0.center/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1599024384361" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1599052977799">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-387.1080.1880@0.0.1920.1040" timestamp="1599052977799" />
     <state width="2005" height="376" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1598799439232" />
-    <state width="2005" height="376" key="GridCell.Tab.0.right" timestamp="1598799439232">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1877" height="187" key="GridCell.Tab.0.left/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1599024384361" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1599052977799">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-387.1080.1880@0.0.1920.1040" timestamp="1599052977799" />
     <state width="2005" height="376" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1598799439232" />
-    <state width="2005" height="376" key="GridCell.Tab.1.bottom" timestamp="1598799439232">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1877" height="187" key="GridCell.Tab.0.right/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1599024384361" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1599052876465">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.-387.1080.1880@0.0.1920.1040" timestamp="1599052876465" />
     <state width="2005" height="376" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1598799439232" />
-    <state width="2005" height="376" key="GridCell.Tab.1.center" timestamp="1598799439232">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1599024384357" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1599052876465">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.-387.1080.1880@0.0.1920.1040" timestamp="1599052876465" />
     <state width="2005" height="376" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1598799439232" />
-    <state width="2005" height="376" key="GridCell.Tab.1.left" timestamp="1598799439232">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1599024384357" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1599052876465">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.-387.1080.1880@0.0.1920.1040" timestamp="1599052876465" />
     <state width="2005" height="376" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1598799439232" />
-    <state width="2005" height="376" key="GridCell.Tab.1.right" timestamp="1598799439232">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1599024384357" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1599052876465">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.-387.1080.1880@0.0.1920.1040" timestamp="1599052876465" />
     <state width="2005" height="376" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1598799439232" />
-    <state x="526" y="201" key="SettingsEditor" timestamp="1598796731503">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/1920.0.1080.1880/0.0.1920.1040@0.0.1920.1040" timestamp="1599024384357" />
+    <state x="493" y="188" key="SettingsEditor" timestamp="1599046463964">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="493" y="188" key="SettingsEditor/0.0.1920.1040/1920.-387.1080.1880@0.0.1920.1040" timestamp="1599046463964" />
     <state x="526" y="201" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1598796731503" />
     <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1598799427799">
       <screen x="0" y="0" width="2048" height="1112" />
@@ -216,5 +228,17 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="829" y="469" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112@0.0.2048.1112" timestamp="1598971684847" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <condition expression="i == 3" language="go" />
+          <url>file://$PROJECT_DIR$/tencent/dp/max_profitII.go</url>
+          <line>17</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
