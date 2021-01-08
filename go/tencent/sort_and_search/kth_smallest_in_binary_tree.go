@@ -2,11 +2,11 @@ package main
 
 import "container/list"
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+//type TreeNode struct {
+//	Val   int
+//	Left  *TreeNode
+//	Right *TreeNode
+//}
 
 func kthSmallest(root *TreeNode, k int) int {
 	stack := list.New()
