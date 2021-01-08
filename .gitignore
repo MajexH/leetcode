@@ -5,3 +5,4 @@
 /graph/*.js
 /typescript/*.js
 .DS_Store
+/go/.idea
