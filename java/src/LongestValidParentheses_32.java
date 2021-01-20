@@ -27,6 +27,6 @@ public class LongestValidParentheses_32 {
     }
 
     public static void main(String[] args) {
-        System.out.println(new LongestValidParentheses_32().longestValidParentheses("(()"));
+        System.out.println(new LongestValidParentheses_32().longestValidParentheses("()()"));
     }
 }
