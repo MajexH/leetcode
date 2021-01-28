@@ -2,10 +2,10 @@ package classic
 
 // mergeKLists 合并k个已经按照升序排列的数组
 func mergeKLists(lists []*ListNode) *ListNode {
-	return merge(lists, 0, len(lists)-1)
+	return mergeForKLists(lists, 0, len(lists)-1)
 }
 
-func merge(lists []*ListNode, start, end int) *ListNode {
+func mergeForKLists(lists []*ListNode, start, end int) *ListNode {
 	if start > end {
 		return nil
 	}
@@ -13,7 +13,7 @@ func merge(lists []*ListNode, start, end int) *ListNode {
 		return lists[start]
 	}
 	mid := (start + end) / 2
-	left, right := merge(lists, start, mid), merge(lists, mid+1, end)
+	left, right := mergeForKLists(lists, start, mid), mergeForKLists(lists, mid+1, end)
 	return mergeTwoList(left, right)
 }
 
