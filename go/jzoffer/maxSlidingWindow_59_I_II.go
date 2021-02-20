@@ -59,7 +59,7 @@ func (mq *MaxQueue) Size() int {
 	return mq.s1.Size() + mq.s2.Size()
 }
 
-func maxSlidingWindow(nums []int, k int) []int {
+func maxSlidingWindowUseMaxQueue(nums []int, k int) []int {
 	if len(nums) == 0 {
 		return []int{}
 	}
