@@ -1,3 +1,5 @@
+package UndirectedWeightGraph;
+
 public class Union {
     // 并查集
     int[] parents;

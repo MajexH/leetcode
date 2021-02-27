@@ -77,7 +77,7 @@ public class MinTree {
     // 相对来说 可以减少时间 因为 一个图的话 一般是 边比点多
     // 这个算法只用在 优先队列中保存点
     public static Edge[] prim(UndirectedWeightGraph g) {
-        // 仍然使用一个 pq 保存最短的边
+        // 仍然使用一个 pq 保存最短的点 （到这个点的最短距离）
         PriorityQueue<Pair> pq = new PriorityQueue<>(Comparator.comparingInt(e -> e.weight));
 
         // edge[i] 保存 i 到 edge.to 的最短边长

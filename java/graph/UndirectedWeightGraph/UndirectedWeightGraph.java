@@ -32,4 +32,16 @@ public class UndirectedWeightGraph {
         this.nodes.get(to).add(edge);
     }
 
+    public List<Edge> getEdges() {
+        List<Edge> res = new ArrayList<>();
+        for (int i = 0; i < capacity; i++) {
+            for (Edge e : adj(i)) {
+                // 因为是从小往大的走 所以 这样判断即可
+                if (e.other(i) > i) {
+                    res.add(e);
+                }
+            }
+        }
+        return res;
+    }
 }
