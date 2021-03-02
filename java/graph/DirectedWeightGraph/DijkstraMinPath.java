@@ -48,8 +48,7 @@ public class DijkstraMinPath {
                 edgeTo[adj.to] = adj;
                 distTo[adj.to] = distTo[node] + adj.weight;
                 // 添加新的 或者 更新原来的节点的最小值
-                Pair p = new Pair(adj.to, distTo[adj.to
-                        ]);
+                Pair p = new Pair(adj.to, distTo[adj.to]);
                 // 更新 pq
                 for (Pair tmp : pq) {
                     if (tmp.node == adj.to) {
