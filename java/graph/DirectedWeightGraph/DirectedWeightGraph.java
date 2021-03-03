@@ -27,6 +27,10 @@ public class DirectedWeightGraph {
         this.nodes.get(from).add(new Edge(from, to, weight));
     }
 
+    public void addEdge(Edge edge) {
+        this.nodes.get(edge.from).add(new Edge(edge.from, edge.to, edge.weight));
+    }
+
     public List<Edge> adj(int node) {
         return this.nodes.get(node);
     }
