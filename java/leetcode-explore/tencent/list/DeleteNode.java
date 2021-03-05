@@ -1,0 +1,19 @@
+package tencent.list;
+
+public class DeleteNode {
+
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
+
+    public void deleteNode(ListNode node) {
+        assert node.next != null;
+        node.val = node.next.val;
+        node.next = node.next.next;
+    }
+}
