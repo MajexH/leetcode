@@ -19,6 +19,10 @@ public class UndirectedGraph<T> implements Graph<T> {
         return map.keySet();
     }
 
+    public int getSize() {
+        return this.map.keySet().size();
+    }
+
     // 无向图 两遍都要加
     public void addEdge(T from, T to) {
         if (!map.containsKey(from)) {
