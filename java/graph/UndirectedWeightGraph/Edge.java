@@ -1,6 +1,6 @@
 package UndirectedWeightGraph;
 
-public class Edge {
+public class Edge implements Comparable<Edge> {
     public int from;
     public int to;
     public int weight;
@@ -27,5 +27,10 @@ public class Edge {
                 ", to=" + to +
                 ", weight=" + weight +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Edge o) {
+        return weight - o.weight;
     }
 }
