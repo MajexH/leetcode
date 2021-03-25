@@ -87,8 +87,8 @@ public class HuffmanCoding {
             map.put(tree.c, tmp);
             return;
         }
-        getBinary(tree.left, map, tmp + "0");
-        getBinary(tree.right, map, tmp + "1");
+        if (tree.left != null) getBinary(tree.left, map, tmp + "0");
+        if (tree.right != null) getBinary(tree.right, map, tmp + "1");
     }
 
     // 根据传入的对应的符号表 + 二进制数组 进行解码
