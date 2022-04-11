@@ -91,7 +91,7 @@ private static class Node<K, V> implements Map.Entry<K, V> {
 1. 查找的起始点
 2. 在访问到这一层的尾部的时候，怎么跳转到下一层次
 
-![](./find.png)
+![](find.png)
 
 ```java
 public class SkipList {
