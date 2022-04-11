@@ -372,6 +372,7 @@ public class SkipList<K, V> extends AbstractMap<K, V> implements Serializable {
         skipList.put(4, 12);
         skipList.remove(4);
         skipList.put(10, 11);
+        skipList.put(-1, 12);
 
         for (Map.Entry<Integer, Integer> entry : skipList.entrySet()) {
             System.out.printf("%d %d \t", entry.getKey(), entry.getValue());
