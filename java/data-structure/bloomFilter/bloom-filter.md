@@ -57,6 +57,7 @@ public void set(int bitIndex) {
     expandTo(wordIndex);
 
     // 2. 设置该位数值
+    // 这个地方能够这样做的愿意是因为左移如果溢出了的话 会自动截断 然后从 1 又开始左移
     words[wordIndex] |= (1L << bitIndex); // Restores invariants
 
     checkInvariants();
