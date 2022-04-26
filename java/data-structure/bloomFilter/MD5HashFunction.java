@@ -29,7 +29,7 @@ public class MD5HashFunction implements HashFunction {
         }
 
         byte[] data = null;
-        messageDigest.update((byte) (seed + ThreadLocalRandom.current().nextInt(seed)));
+        messageDigest.update((byte) seed);
         data = messageDigest.digest(val.getBytes(StandardCharsets.UTF_8));
 
         int res = 0;

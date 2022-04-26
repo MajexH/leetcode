@@ -134,7 +134,7 @@ public class BloomFilter {
     private static int[] createHashesByFunction(String data, int hashFrequency) {
         int[] res = new int[hashFrequency];
         for (int i = 0; i < hashFrequency; i++) {
-            res[i] = HASH_FUNCTIONS.get(i % HASH_FUNCTIONS.size()).hash(SEEDS.get(i % SEEDS.size()), data);
+            res[i] = Math.abs(HASH_FUNCTIONS.get(i % HASH_FUNCTIONS.size()).hash(SEEDS.get(i % SEEDS.size()), data));
         }
         return res;
     }
