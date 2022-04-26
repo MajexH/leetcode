@@ -23,7 +23,7 @@ public class BloomFilter {
     private int n;
 
     /**
-     * 最大容量 即 bitSet 的 word 数组大小 * long 有 6 位数
+     * 最大容量
      */
     private int m;
 
@@ -58,7 +58,8 @@ public class BloomFilter {
 
 
     public BloomFilter(int k) {
-        this.bitSet = new BitSet();
+        this.m = 100000;
+        this.bitSet = new BitSet(this.m);
         this.n = 0;
         this.k = k;
     }
@@ -75,6 +76,7 @@ public class BloomFilter {
         for (int index : res) {
             bitSet.set(index % (this.m - 1), true);
         }
+        this.n++;
     }
 
     public boolean mayContains(String key) {
@@ -138,7 +140,10 @@ public class BloomFilter {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(MESSAGE_DIGEST.digest("123".getBytes(StandardCharsets.UTF_8))));
-        System.out.println(Arrays.toString(MESSAGE_DIGEST.digest("132131231231231233".getBytes(StandardCharsets.UTF_8))));
+        BloomFilter filter = new BloomFilter(3);
+        filter.add("test");
+
+        System.out.println(filter.mayContains("test"));
+        System.out.println(filter.mayContains("412312312312312312312"));
     }
 }
