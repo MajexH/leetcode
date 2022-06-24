@@ -43,14 +43,17 @@ import java.util.Objects;
 
 public class MedianOfTwoSortedArrays4 {
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        MedianOfTwoSortedArrays4.Solution solution = new MedianOfTwoSortedArrays4().new Solution();
         System.out.println(solution.findMedianSortedArrays(new int[]{1, 3}, new int[]{2}));
         System.out.println(solution.findMedianSortedArrays(new int[]{1, 3, 4}, new int[]{2, 5, 8}));
-        System.out.println(solution.findMedianSortedArrays(new int[]{1, 2,3}, new int[]{6, 7, 8}));
+        System.out.println(solution.findMedianSortedArrays(new int[]{1, 2, 3}, new int[]{6, 7, 8}));
+        System.out.println(solution.findMedianSortedArrays(new int[]{0, 0, 0, 0, 0}, new int[]{-1, 0, 0, 0, 0, 0, 1}));
+        System.out.println(solution.findMedianSortedArrays(new int[]{1}, new int[]{2, 3, 4}));
+        System.out.println(solution.findMedianSortedArrays(new int[]{1,2,4}, new int[]{3}));
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
-    static class Solution {
+    class Solution {
         public double findMedianSortedArrays(int[] nums1, int[] nums2) {
             if (Objects.isNull(nums1) || nums1.length == 0) {
                 return this.findMedianSortedInOneArray(nums2);
@@ -71,8 +74,16 @@ public class MedianOfTwoSortedArrays4 {
                     break;
                 }
 
-                int num1 = index1 < nums1.length ? nums1[index1] : Integer.MIN_VALUE;
-                int num2 = index2 < nums2.length ? nums2[index2] : Integer.MIN_VALUE;
+                if (index1 >= nums1.length) {
+                    index2++;
+                    continue;
+                }
+                if (index2 >= nums2.length) {
+                    index1++;
+                    continue;
+                }
+
+                int num1 = nums1[index1], num2 = nums2[index2];
 
                 if (num1 < num2) {
                     index1++;
@@ -86,17 +97,18 @@ public class MedianOfTwoSortedArrays4 {
             }
 
             if (index2 == nums2.length) {
-                return ((totalLength & 1) == 1) ? nums1[index1] : (Math.max(index1 - 1 < 0 ? ) + nums1[index1]) / 2D;
+                return ((totalLength & 1) == 1) ? nums1[index1] : (Math.max(index1 - 1 < 0 ? Integer.MIN_VALUE : nums1[index1 - 1], nums2[index2 - 1]) + nums1[index1]) / 2D;
             }
 
 
             if (nums1[index1] > nums2[index2]) {
                 // 以 nums2 为最后一个
                 return (totalLength & 1) == 1 ? nums2[index2] :
-                        (nums2[index2] + Math.max(index1 - 1 < 0 ? Integer.MIN_VALUE : nums1[index1 - 1], nums2[index2 - 1])) / 2D;
+                        (nums2[index2] + Math.max(index1 - 1 < 0 ? Integer.MIN_VALUE : nums1[index1 - 1], index2 - 1 < 0 ? Integer.MIN_VALUE : nums2[index2 - 1])) / 2D;
             }
 
-            return (totalLength & 1) == 1 ? nums1[index1] : (nums1[index1] + Math.max(index2 - 1 < 0 ? Integer.MIN_VALUE : nums2[index2 - 1], nums1[index1 - 1])) / 2D;
+            return (totalLength & 1) == 1 ? nums1[index1] :
+                    (nums1[index1] + Math.max(index2 - 1 < 0 ? Integer.MIN_VALUE : nums2[index2 - 1], index1 - 1 < 0 ? Integer.MIN_VALUE : nums1[index1 - 1])) / 2D;
         }
 
         private double findMedianSortedInOneArray(int[] nums) {
