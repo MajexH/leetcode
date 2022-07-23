@@ -1,0 +1,21 @@
+func kthSmallest(root *TreeNode, k int) int {
+	stack := list.New()
+	counter := 0	
+	for root != nil || stack.Len() > 0 {
+		for root != nil {
+			stack.PushBack(root)
+			root = root.Left
+		}
+		if stack.Len() > 0 {
+			root = stack.Remove(stack.Back()).(*TreeNode)
+			if counter == k - 1 {
+				return root.Val
+			}
+			counter++
+			root = root.Right
+		}
+	}
+	return -1
+}
+//runtime:12 ms
+//memory:6.3 MB

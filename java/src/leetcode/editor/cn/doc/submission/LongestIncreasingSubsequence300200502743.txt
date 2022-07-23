@@ -1,0 +1,22 @@
+class Solution {
+    public int lengthOfLISBruteForce(int[] nums) {
+        int[] dp = new int[nums.length];
+        Arrays.fill(dp, 1);
+        int res = -1;
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < i; j++) {
+                if (nums[i] > nums[j]) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                }
+            }
+            res = Math.max(res, dp[i]);
+        }
+        return res;
+    }
+}
+//total_correct:0
+//compile_error:Line 7: error: cannot find symbol [in __Driver__.java]
+      int ret = new Solution().lengthOfLIS(param_1);
+                              ^
+  symbol:   method lengthOfLIS(int[])
+  location: class Solution

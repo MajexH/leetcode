@@ -1,0 +1,27 @@
+func kthSmallest(root *TreeNode, k int) int {
+	return recursionKthSmallest(root, k).Val
+}
+
+func recursionKthSmallest(root *TreeNode, k int) *TreeNode {
+	if root == nil {
+		return nil
+	}
+	left := countTree(root.Left)
+	if left + 1 > k {
+		return recursionKthSmallest(root.Left, k)
+	} else if left + 1 < k {
+		return recursionKthSmallest(root.Right, k - left - 1)
+	} else {
+		return root
+	}
+}
+
+func countTree(node *TreeNode) int {
+	if node == nil {
+		return 0
+	}
+	return countTree(node.Left) + countTree(node.Right) + 1
+}
+
+//runtime:20 ms
+//memory:6.3 MB
