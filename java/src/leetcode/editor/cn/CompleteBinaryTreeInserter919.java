@@ -92,7 +92,7 @@ public class CompleteBinaryTreeInserter919 {
                 root = new TreeNode(val);
                 return -1;
             }
-            this.depth = this.getDepth(this.root);
+
             int curDepth = 1;
             // 在根节点不为空的情况下插入
             // 层次遍历到倒数第二层 看哪个节点的下一层为空
@@ -131,6 +131,7 @@ public class CompleteBinaryTreeInserter919 {
                 // 最大深度
                 if (curDepth == this.depth) {
                     head.left = new TreeNode(val);
+                    this.depth++;
                     return head.val;
                 }
             }
