@@ -93,7 +93,7 @@ public class CompleteBinaryTreeInserter919 {
                 return -1;
             }
             this.depth = this.getDepth(this.root);
-            int curDepth = 0;
+            int curDepth = 1;
             // 在根节点不为空的情况下插入
             // 层次遍历到倒数第二层 看哪个节点的下一层为空
             Deque<TreeNode> queue = new LinkedList<>();
