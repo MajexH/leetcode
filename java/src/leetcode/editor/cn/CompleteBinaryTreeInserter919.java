@@ -127,6 +127,12 @@ public class CompleteBinaryTreeInserter919 {
                         return head.val;
                     }
                 }
+
+                // 最大深度
+                if (curDepth == this.depth) {
+                    head.left = new TreeNode(val);
+                    return head.val;
+                }
             }
             return -1;
         }
