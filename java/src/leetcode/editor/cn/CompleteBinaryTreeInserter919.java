@@ -49,6 +49,7 @@ package leetcode.editor.cn;//完全二叉树 是每一层（除最后一层外�
 
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Objects;
 
 public class CompleteBinaryTreeInserter919 {
@@ -76,14 +77,109 @@ public class CompleteBinaryTreeInserter919 {
 
     //leetcode submit region begin(Prohibit modification and deletion)
 
+    //    class CBTInserter {
+//
+//        private TreeNode root;
+//        private int depth;
+//
+//        public CBTInserter(TreeNode root) {
+//            this.root = root;
+//            this.depth = this.getDepth(root);
+//        }
+//
+//        public int insert(int val) {
+//            // 初始化根节点
+//            if (Objects.isNull(root)) {
+//                root = new TreeNode(val);
+//                return -1;
+//            }
+//
+//            int curDepth = 1;
+//            // 在根节点不为空的情况下插入
+//            // 层次遍历到倒数第二层 看哪个节点的下一层为空
+//            Deque<TreeNode> queue = new LinkedList<>();
+//            queue.addLast(root);
+//            queue.addLast(null);
+//            while (!queue.isEmpty()) {
+//                TreeNode head = queue.removeFirst();
+//                if (head == null) {
+//                    if (queue.size() == 0) {
+//                        break;
+//                    }
+//                    queue.addLast(null);
+//                    curDepth++;
+//                    continue;
+//                }
+//
+//                if (head.left != null) {
+//                    queue.addLast(head.left);
+//                }
+//                if (head.right != null) {
+//                    queue.addLast(head.right);
+//                }
+//
+//                if (curDepth == this.depth - 1) {
+//                    if (head.left == null) {
+//                        head.left = new TreeNode(val);
+//                        return head.val;
+//                    }
+//                    if (head.right == null) {
+//                        head.right = new TreeNode(val);
+//                        return head.val;
+//                    }
+//                }
+//
+//                // 最大深度
+//                if (curDepth == this.depth) {
+//                    head.left = new TreeNode(val);
+//                    this.depth++;
+//                    return head.val;
+//                }
+//            }
+//            return -1;
+//        }
+//
+//        public TreeNode get_root() {
+//            return root;
+//        }
+//
+//        private int getDepth(TreeNode node) {
+//            if (node == null) {
+//                return 0;
+//            }
+//            return Math.max(this.getDepth(node.left), this.getDepth(node.right)) + 1;
+//        }
+//    }
     class CBTInserter {
 
         private TreeNode root;
-        private int depth;
+        private LinkedList<TreeNode> candidates;
 
         public CBTInserter(TreeNode root) {
             this.root = root;
-            this.depth = this.getDepth(root);
+            this.candidates = new LinkedList<>();
+
+            if (Objects.isNull(root)) {
+                return;
+            }
+
+            Deque<TreeNode> queue = new LinkedList<>();
+            queue.addLast(root);
+            // 层次遍历
+            while (queue.size() != 0) {
+                TreeNode first = queue.removeFirst();
+
+                if (first.left != null) {
+                    queue.addLast(first.left);
+                }
+                if (first.right != null) {
+                    queue.addLast(first.right);
+                }
+
+                if (first.left == null || first.right == null) {
+                    this.candidates.addLast(first);
+                }
+            }
         }
 
         public int insert(int val) {
@@ -93,61 +189,29 @@ public class CompleteBinaryTreeInserter919 {
                 return -1;
             }
 
-            int curDepth = 1;
-            // 在根节点不为空的情况下插入
-            // 层次遍历到倒数第二层 看哪个节点的下一层为空
-            Deque<TreeNode> queue = new LinkedList<>();
-            queue.addLast(root);
-            queue.addLast(null);
-            while (!queue.isEmpty()) {
-                TreeNode head = queue.removeFirst();
-                if (head == null) {
-                    if (queue.size() == 0) {
-                        break;
-                    }
-                    queue.addLast(null);
-                    curDepth++;
-                    continue;
-                }
+            TreeNode node = new TreeNode(val);
 
-                if (head.left != null) {
-                    queue.addLast(head.left);
-                }
-                if (head.right != null) {
-                    queue.addLast(head.right);
-                }
-
-                if (curDepth == this.depth - 1) {
-                    if (head.left == null) {
-                        head.left = new TreeNode(val);
-                        return head.val;
-                    }
-                    if (head.right == null) {
-                        head.right = new TreeNode(val);
-                        return head.val;
-                    }
-                }
-
-                // 最大深度
-                if (curDepth == this.depth) {
-                    head.left = new TreeNode(val);
-                    this.depth++;
-                    return head.val;
-                }
+            if (candidates.size() == 0) {
+                return -1;
             }
-            return -1;
+
+            TreeNode candidate = this.candidates.getFirst();
+
+            if (candidate.left == null) {
+                candidate.left = node;
+            } else if (candidate.right == null) {
+                candidate.right = node;
+                this.candidates.removeFirst();
+            }
+            this.candidates.addLast(node);
+
+            return candidate.val;
         }
 
         public TreeNode get_root() {
             return root;
         }
 
-        private int getDepth(TreeNode node) {
-            if (node == null) {
-                return 0;
-            }
-            return Math.max(this.getDepth(node.left), this.getDepth(node.right)) + 1;
-        }
     }
 
 /**
