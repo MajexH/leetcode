@@ -32,7 +32,7 @@
 // Related Topics 链表 👍 1155 👎 0
 
 
-package src.leetcode.editor.cn;
+package leetcode.editor.cn;
 
 public class DeleteNodeInALinkedList237 {
 
