@@ -1,4 +1,4 @@
-public class NUmberSpecial_1582 {
+public class NumberSpecial_1582 {
 
     public int numSpecial(int[][] mat) {
         int[] rows = new int[mat.length];
