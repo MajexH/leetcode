@@ -49,40 +49,51 @@
 
 package leetcode.editor.cn;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class CountUniqueCharactersOfAllSubstringsOfAGivenString828 {
     public static void main(String[] args) {
         Solution solution = new CountUniqueCharactersOfAllSubstringsOfAGivenString828().new Solution();
-        System.out.println(solution.uniqueLetterString("AAXAA"));
-
+//        System.out.println(solution.uniqueLetterString("AAXAA"));
 //        System.out.println(solution.uniqueLetterString("ABA"));
-//        System.out.println(solution.uniqueLetterString("ABC"));
-//        System.out.println(solution.uniqueLetterString("LEETCODE"));
-    }
-
-    private static int String(String s) {
-        Map<Character, Integer> map = new HashMap<>();
-
-        for (char c : s.toCharArray()) {
-            map.put(c, map.getOrDefault(c, 0) + 1);
-        }
-
-        int res = 0;
-        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-            if (entry.getValue() == 1) {
-                res++;
-            }
-        }
-        return res;
+        System.out.println(solution.uniqueLetterString("ABC"));
+        System.out.println(solution.uniqueLetterString("LEETCODE"));
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
 
-        // 暴力解法 xiangdao de shi
-        public int uniqueLetterStringBrute(String s) {
+        // 计算的是当前这个字符对最后结果的贡献度
+        // 当前这个字符如果在中间 那么其左右的字符串
+        public int uniqueLetterString(String s) {
+            List<Integer>[] dp = new List[26];
+
+            for (int i = 0; i < s.length(); i++) {
+                char c = s.charAt(i);
+                int position = c - 'A';
+
+                if (dp[position] == null) {
+                    dp[position] = new ArrayList<>(Arrays.asList(-1));
+                }
+                dp[position].add(i);
+            }
+            int res = 0;
+            for (int i = 0; i < dp.length; i++) {
+                if (dp[i] == null) {
+                    continue;
+                }
+                // 添加 n 的数据
+                dp[i].add(s.length());
+                for (int j = 1; j < dp[i].size() - 1; j++) {
+                    res += (dp[i].get(j) - dp[i].get(j - 1)) * (dp[i].get(j + 1) - dp[i].get(j));
+                }
+
+            }
+            return res;
+        }
+
+        // 暴力解法 想到的是一个字符一个字符的往后推进 通过上一个状态记录的是否有重复的字符来保证结果
+        public int uniqueLetterStringBruteForce(String s) {
             int res = 0;
 
             Pair[] bits = new Pair[s.length()];
