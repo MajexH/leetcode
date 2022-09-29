@@ -16,6 +16,7 @@ package leetcode.editor.cn;
 public class GetKthMagicNumberLcci_17_09 {
     public static void main(String[] args) {
         Solution solution = new GetKthMagicNumberLcci_17_09().new Solution();
+        System.out.println(solution.getKthMagicNumber(5));
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
@@ -24,6 +25,11 @@ public class GetKthMagicNumberLcci_17_09 {
         private static final class Factor {
             int factor;
             int index;
+
+            public Factor(int factor) {
+                this.factor = factor;
+                this.index = 0;
+            }
         }
 
         // 能够同时被 357 整除的数儿 其实就是丑数
@@ -33,15 +39,27 @@ public class GetKthMagicNumberLcci_17_09 {
             }
 
             int[] nums = new int[k];
-            nums[1] = 1;
+            nums[0] = 1;
 
-            Factor[] indexes = new Factor[3];
+            Factor[] indexes = new Factor[]{
+                    new Factor(3),
+                    new Factor(5),
+                    new Factor(7)
+            };
 
-            for (int i = 1; i <= k; i++) {
-                int min = 0;
+            for (int i = 2; i <= k; i++) {
+                int min = Integer.MAX_VALUE;
+                for (Factor factor : indexes) {
+                    min = Math.min(factor.factor * nums[factor.index], min);
+                }
+                nums[i - 1] = min;
 
-
-
+                // 重新定位 index
+                for (Factor factor : indexes) {
+                    while (factor.factor * nums[factor.index] <= nums[i - 1]) {
+                        factor.index++;
+                    }
+                }
             }
 
             return nums[k - 1];
