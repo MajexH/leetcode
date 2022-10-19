@@ -97,7 +97,7 @@ public class NumbersAtMostNGivenDigitSet902 {
                 // 小于的话 说明下面的可以随意组合
                 if (digits[i].charAt(0) < chars[j]) {
                     // 看看 chars 还剩下几位 说明这几位是个组合
-                    res += Math.pow(digits.length, chars.length - j - 1);
+                    res += Math.pow(digits.length, chars.length - j - 1D);
                     continue;
                 }
 
