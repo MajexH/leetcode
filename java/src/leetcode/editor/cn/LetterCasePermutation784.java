@@ -37,6 +37,7 @@ import java.util.List;
 public class LetterCasePermutation784 {
     public static void main(String[] args) {
         Solution solution = new LetterCasePermutation784().new Solution();
+        System.out.println(solution.letterCasePermutation("a1b1"));
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
@@ -44,24 +45,28 @@ public class LetterCasePermutation784 {
         public List<String> letterCasePermutation(String s) {
             List<String> res = new ArrayList<>();
 
-            this.recursion(0, s, res, "");
+            this.recursion(0, s, res, new StringBuilder());
 
             return res;
         }
 
-        private void recursion(int index, String s, List<String> res, String temp) {
+        private void recursion(int index, String s, List<String> res, StringBuilder builder) {
             if (index == s.length()) {
-                res.add(temp);
+                res.add(builder.toString());
                 return;
             }
 
             if (!Character.isAlphabetic(s.charAt(index))) {
-                this.recursion(index + 1, s, res, temp + s.charAt(index));
+                builder.append(s.charAt(index));
+                this.recursion(index + 1, s, res, builder);
+                builder.deleteCharAt(builder.length() - 1);
                 return;
             }
 
             for (char c : this.getChars(s.charAt(index))) {
-                this.recursion(index + 1, s, res, temp + c);
+                builder.append(c);
+                this.recursion(index + 1, s, res, builder);
+                builder.deleteCharAt(builder.length() - 1);
             }
         }
 
@@ -71,7 +76,6 @@ public class LetterCasePermutation784 {
             }
             return new char[]{alphabet, (char) (alphabet - 'A' + 'a')};
         }
-
     }
 //leetcode submit region end(Prohibit modification and deletion)
 
