@@ -49,7 +49,7 @@ public class SumOfSubarrayMinimums907 {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
 
-        private static Integer MOD = (int) 1e9 + 7;
+        private static final int MOD = (int) 1e9 + 7;
 
         public int sumSubarrayMins(int[] arr) {
             long res = 0L;
