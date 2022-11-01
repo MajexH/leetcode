@@ -88,10 +88,10 @@ public class MagicalString481 {
             for (int i = index; i < magicStr.length(); i++) {
                 char nextChar = this.getNextChar(isOne);
                 if (magicStr.charAt(i) == '1') {
-                    builder.append(c);
+                    builder.append(nextChar);
                 } else {
-                    builder.append(c);
-                    builder.append(c);
+                    builder.append(nextChar);
+                    builder.append(nextChar);
                 }
                 isOne = !isOne;
             }
