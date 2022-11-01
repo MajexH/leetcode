@@ -31,4 +31,4 @@
 
 <p>&nbsp;</p>
 
-<div><div>Related Topics</div><div><li>栈</li><li>数组</li><li>动态规划</li><li>单调栈</li></div></div><br><div><li>👍 548</li><li>👎 0</li></div>
+<div><div>Related Topics</div><div><li>栈</li><li>数组</li><li>动态规划</li><li>单调栈</li></div></div><br><div><li>👍 454</li><li>👎 0</li></div>
