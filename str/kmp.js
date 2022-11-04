@@ -27,7 +27,7 @@ function kmp(str, pattern) {
   let next = getNext(pattern)
   while (i < str.length && j < pattern.length) {
     // 如果匹配
-    if (j === - 1 || str.charAt(i) === pattern.charAt(j)) {
+    if (j === -1 || str.charAt(i) === pattern.charAt(j)) {
       i++
       j++
     } else {
