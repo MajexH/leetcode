@@ -115,7 +115,6 @@ public class ShortestPathToGetAllKeys864 {
 
                 Node first = queue.removeFirst();
 
-
                 for (int[] direction : DIRECTIONS) {
                     int x = first.x + direction[0], y = first.y + direction[1];
                     int dis = first.dis + 1;
