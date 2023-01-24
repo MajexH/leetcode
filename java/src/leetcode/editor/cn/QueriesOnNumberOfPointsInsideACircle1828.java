@@ -67,8 +67,8 @@ public class QueriesOnNumberOfPointsInsideACircle1828 {
 
         private int compute(int[] points, int[] query) {
 
-            boolean flag =
-                    (Math.pow((points[0] - query[0]), 2) + Math.pow((points[1] - query[1]), 2)) <= query[2] * query[2];
+            boolean flag = ((points[0] - query[0]) * (points[0] - query[0])
+                    + (points[1] - query[1]) * (points[1] - query[1])) <= query[2] * query[2];
 
             return flag ? 1 : 0;
         }
