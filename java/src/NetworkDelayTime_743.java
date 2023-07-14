@@ -84,11 +84,4 @@ public class NetworkDelayTime_743 {
         return max;
     }
 
-    public static void main(String[] args) {
-        System.out.println(new NetworkDelayTime_Example_743().networkDelayTime(new int[][]{
-                {2,1,1},
-                {2,3,1,},
-                {3,4,1}
-        }, 4, 2));
-    }
 }

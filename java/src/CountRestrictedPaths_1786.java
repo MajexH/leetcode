@@ -1,5 +1,3 @@
-import microsoft.PlusOne;
-
 import java.util.*;
 
 public class CountRestrictedPaths_1786 {
